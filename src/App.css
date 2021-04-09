@@ -40,6 +40,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 body {
     background-color: #1A6340;
+    border: thick double #E1AF4F;
     color: #E1AF4F;
     padding: 40px;
     font-family: 'Lato', sans-serif;
@@ -49,4 +50,13 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 h1 {
     font-family: 'Cinzel Decorative', cursive;
+    font-size: 5.9vw;
+}
+
+h2 {
+    font-size: 3.0vh;
+}
+
+p {
+    font-size: 2vmin;
 }
