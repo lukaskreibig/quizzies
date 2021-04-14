@@ -15,15 +15,32 @@ function App() {
 
  const quizFetch = () => {
    axios
-   .get("https://opentdb.com/api.php?amount=10")
+   .get("https://opentdb.com/api.php?amount=10&type=multiple")
    .then((res) => setQuizArray(res.data.results));
   };
 
   useEffect(quizFetch, [])
+
   console.log(quizArray)
+  console.log(quizArray[0].correct_answer)
+  console.log(quizArray[0].incorrect_answers)
+  console.log(quizArray[0].correct_answer)
+  
+
 
   return (
     <div className="App"> 
+{/* 
+    Question
+    <h2> {quizArray[0].question} </h2>
+
+    <button> {quizArray[0].correct_answer} </button> 
+    
+    {quizArray[0].incorrect_answers.map(answer, index => <button> {answer[index]} </button>)}
+    */}
+
+
+
     </div>
   );
 }
