@@ -1,62 +1,23 @@
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 body {
-    background-color: #1A6340;
-    border: thick double #E1AF4F;
-    color: #E1AF4F;
-    padding: 40px;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
+  background-color: #1a6340;
+  border: thick double #e1af4f;
+  color: #e1af4f;
+  padding: 40px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
 h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 5.9vw;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5.9vw;
 }
 
 h2 {
-    font-size: 3.0vh;
+  font-size: 3vh;
 }
 
 p {
-    font-size: 2vmin;
+  font-size: 2vmin;
 }
