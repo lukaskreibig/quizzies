@@ -1,6 +1,6 @@
 import './App.css';
 import axios from 'axios';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 
@@ -13,12 +13,14 @@ function App() {
 
   const [quizArray, setQuizArray] = useState([]);
 
-  const quizFetch = () => {
+ const quizFetch = () => {
    axios
-    .get("https://opentdb.com/api.php?amount=10")
-    .then((res) => setQuizArray(res.data));
+   .get("https://opentdb.com/api.php?amount=10")
+   .then((res) => setQuizArray(res.data.results));
   };
-  
+
+  useEffect(quizFetch, [])
+  console.log(quizArray)
 
   return (
     <div className="App"> 
