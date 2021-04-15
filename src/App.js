@@ -21,31 +21,26 @@ function App() {
 
   useEffect(quizFetch, [])
 
-  console.log(quizArray)
-  console.log(quizArray[0].correct_answer)
-  console.log(quizArray[0].incorrect_answers)
-  console.log(quizArray[0].correct_answer)
+  // console.log(quizArray)
+  // console.log(quizArray[0].incorrect_answers)
+  // console.log(quizArray[0].correct_answer)
+
+
   
 
 
-  return (
-    <div className="App"> 
-{/* 
-    Question
-    <h2> {quizArray[0].question} </h2>
-
-    <button> {quizArray[0].correct_answer} </button> 
-    
-    {quizArray[0].incorrect_answers.map(answer, index => <button> {answer[index]} </button>)}
-    */}
-
-
-
-    </div>
+return (
+    quizArray.length > 0 && (
+      <div className='App'>
+        Question
+        <h2> {quizArray[0].question} </h2>
+        <button> {quizArray[0].correct_answer} </button>
+        {quizArray[0].incorrect_answers.map((answer, index) => (
+          <button> {answer[index]} </button>
+        ))}
+      </div>
+    )
   );
 }
 
 export default App;
-
-//https://opentdb.com/api.php?amount=10
-//https://opentdb.com/api.php?amount=10&category=22&difficulty=medium
