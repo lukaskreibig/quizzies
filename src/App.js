@@ -2,13 +2,6 @@ import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 
-
-
-/*axios
-.get("https://foodish-api.herokuapp.com/api/")
-.then((res) => setFood(res.data.image))
-.catch((err) => console.log(err)); */
-
 function App() {
 
   const [quizArray, setQuizArray] = useState([]);
@@ -20,14 +13,6 @@ function App() {
   };
 
   useEffect(quizFetch, [])
-
-  // console.log(quizArray)
-  // console.log(quizArray[0].incorrect_answers)
-  // console.log(quizArray[0].correct_answer)
-
-
-  
-
 
 return (
     quizArray.length > 0 && (
