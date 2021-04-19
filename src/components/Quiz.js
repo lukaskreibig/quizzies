@@ -23,6 +23,7 @@ function Quiz() {
     ) : (
         <div className="App">
             <h2> ...Loading QUIZ...</h2>
+            <div></div>
         </div>
     );
 }
