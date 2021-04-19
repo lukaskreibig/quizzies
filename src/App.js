@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { useState, useEffect } from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  const [quizArray, setQuizArray] = useState([]);
+
+ const quizFetch = () => {
+   axios
+   .get("https://opentdb.com/api.php?amount=10&type=multiple")
+   .then((res) => setQuizArray(res.data.results));
+  };
+
+  useEffect(quizFetch, [])
+
+return (
+    quizArray.length > 0 && (
+      <div className='App'>
+        Question
+        <h2> {quizArray[0].question} </h2>
+        <button> {quizArray[0].correct_answer} </button>
+        {quizArray[0].incorrect_answers.map((answer, index) => (
+          <button> {answer[index]} </button>
+        ))}
+      </div>
+    )
   );
 }
 
