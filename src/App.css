@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
 
 body {
-    background-color: #1a6340;
+    background-color: #0d482c;
     border: thick double #e1af4f;
     color: #e1af4f;
     padding: 40px;
@@ -11,7 +11,7 @@ body {
 }
 h1 {
     font-family: "Cinzel Decorative", cursive;
-    font-size: 5.9vw;
+    font-size: 5.9pts;
 }
 
 h2 {
