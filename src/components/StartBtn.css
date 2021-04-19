@@ -1,0 +1,23 @@
+#start-btn {
+    max-width: 30%;
+    margin: 50px;
+}
+
+.startbtn {
+    display: block;
+    margin: 0 auto;
+    height: 20px;
+}
+
+.startbtn[spin="1"] {
+    animation: spin 1s 1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,8 +1,7 @@
-import './App.css';
-import axios from 'axios';
-import { useState, useEffect } from 'react'
-
-
+import "./App.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Home from "./components/Home";
 
 /*axios
 .get("https://foodish-api.herokuapp.com/api/")
@@ -10,22 +9,22 @@ import { useState, useEffect } from 'react'
 .catch((err) => console.log(err)); */
 
 function App() {
+    const [quizArray, setQuizArray] = useState([]);
 
-  const [quizArray, setQuizArray] = useState([]);
+    const quizFetch = () => {
+        axios
+            .get("https://opentdb.com/api.php?amount=10")
+            .then((res) => setQuizArray(res.data.results));
+    };
 
- const quizFetch = () => {
-   axios
-   .get("https://opentdb.com/api.php?amount=10")
-   .then((res) => setQuizArray(res.data.results));
-  };
+    useEffect(quizFetch, []);
+    console.log(quizArray);
 
-  useEffect(quizFetch, [])
-  console.log(quizArray)
-
-  return (
-    <div className="App"> 
-    </div>
-  );
+    return (
+        <div className="App">
+            <Home />
+        </div>
+    );
 }
 
 export default App;
