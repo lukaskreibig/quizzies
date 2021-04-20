@@ -10,27 +10,33 @@ function Quiz() {
       .then((res) => setQuizArray(res.data.results));
   };
 
+  console.log(quizArray);
+
   useEffect(quizFetch, []);
 
-  let quizAnswers = [
-    quizArray[0].correct_answer.push(quizArray[0].incorrect_answers),
-    console.log(quizAnswers),
-  ];
+  const handleShuffle = () => {
+    let quizAnswers = [
+      quizArray[0].correct_answer,
+      ...quizArray[0].incorrect_answers,
+    ];
+    console.log(quizAnswers);
 
-  let shuffledAnswers = quizAnswers
-    .map((a) => ({ sort: Math.random(), value: a }))
-    .sort((a, b) => a.sort - b.sort)
-    .map((a) => a.value);
-  console.log(shuffledAnswers);
+    let shuffledAnswers = quizAnswers
+      .map((a) => ({ sort: Math.random(), value: a }))
+      .sort((a, b) => a.sort - b.sort)
+      .map((a) => a.value);
+    console.log(shuffledAnswers, "shuffled");
+  };
+
+  // useEffect(handleShuffle, [quizArray]);
 
   return quizArray.length > 0 ? (
     <div>
       <h2> {quizArray[0].question} </h2>
-
-      {shuffledAnswers.map((answers) => (
+      <button onClick={handleShuffle}>shuffle</button>
+      {/* {shuffledAnswers.map((answers) => (
         <button> {answers} </button>
-      ))}
-
+      ))}  */}
       {/* Make an array of answers shuffled and map over them to render the button */}
     </div>
   ) : (
