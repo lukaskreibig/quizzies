@@ -1,20 +1,7 @@
-.Home {
-    background-color: #0d482c;
+.Homebody {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-h1 {
-    color: #e1af4f;
-    font-family: "Cinzel Decorative", cursive;
-    margin: 50px;
-}
-
-h2 {
-    color: #e1af4f;
-    font-family: "Lato", sans-serif;
-    margin: 20px;
 }
