@@ -1,13 +1,15 @@
 import "./App.css";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
+import StarRating from "./components/StarRating";
+
 
 function App() {
     return (
-        <div>
+        <div className="App">
             <Home />
             <Quiz />
-            <div></div>
+            <StarRating />
         </div>
     );
 }
