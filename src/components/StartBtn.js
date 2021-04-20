@@ -23,7 +23,5 @@ const StartBtn = () => {
 
 export default StartBtn;
 
-/*
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/M5fhCSf/start-button-play-only.png" alt="start-button-play-only" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZKNdzPR/start-button-without-play.png" alt="start-button-without-play" border="0"></a></a>
-*/
+//<a href="https://imgbb.com/"><img src="https://i.ibb.co/M5fhCSf/start-button-play-only.png" alt="start-button-play-only" border="0"></a>
+//<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZKNdzPR/start-button-without-play.png" alt="start-button-without-play" border="0"></a>
