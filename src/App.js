@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/quiz" component={Quiz} />
                 <Route path="/contact" component={Contact} />
             </Switch>
+            <Footer />
         </div>
     );
 };
