@@ -1,12 +1,11 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
 import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
-import StarRating from "./components/StarRating";
-import Navbar from "./components/Navbar";
 
 function App() {
     return (
@@ -18,8 +17,9 @@ function App() {
                 <Route path="/quiz" component={Quiz} />
                 <Route path="/contact" component={Contact} />
             </Switch>
+            <Footer />
         </div>
     );
-}
+};
 
 export default App;
