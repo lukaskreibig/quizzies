@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function InputSelect() {
     return (
-        <div className="Inputbody">
+        <div className="Input">
             <div className="Topic">
                 <h2>Search for a topic:</h2>
                 <Topic />

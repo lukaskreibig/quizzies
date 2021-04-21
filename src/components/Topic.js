@@ -11,7 +11,7 @@ const topicSelection = [
     { label: "Video Games", value: "Video Games" },
     { label: "Sport", value: "Sport" },
     { label: "Geography", value: "Geography" },
-    { label: "Art", value: "Art" },
+    { label: "Arts", value: "Arts" },
 ];
 
 function Topic() {

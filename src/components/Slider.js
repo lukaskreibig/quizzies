@@ -20,7 +20,7 @@ class Slider extends React.Component {
     render() {
         return (
             <div>
-                <div className="slidecontainer">
+                <div className="Slidecontainer">
                     <RangeStepInput
                         class="slider"
                         id="myRange"
