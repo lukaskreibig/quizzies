@@ -1,43 +1,25 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Quiz() {
   const [quizArray, setQuizArray] = useState([]);
+  const [quizAnswers, setQuizAnswers] = useState([]);
 
-  const quizFetch = () => {
-    axios
-      .get("https://opentdb.com/api.php?amount=10&type=multiple")
-      .then((res) => setQuizArray(res.data.results));
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(
+        "https://opentdb.com/api.php?amount=10&type=multiple"
+      );
+      setQuizArray(result.data.results);
+    };
+    fetchData();
+  }, []);
 
   console.log(quizArray);
-
-  useEffect(quizFetch, []);
-
-  const handleShuffle = () => {
-    let quizAnswers = [
-      quizArray[0].correct_answer,
-      ...quizArray[0].incorrect_answers,
-    ];
-    console.log(quizAnswers);
-
-    let shuffledAnswers = quizAnswers
-      .map((a) => ({ sort: Math.random(), value: a }))
-      .sort((a, b) => a.sort - b.sort)
-      .map((a) => a.value);
-    console.log(shuffledAnswers, "shuffled");
-  };
-
-  // useEffect(handleShuffle, [quizArray]);
 
   return quizArray.length > 0 ? (
     <div>
       <h2> {quizArray[0].question} </h2>
-      <button onClick={handleShuffle}>shuffle</button>
-      {/* {shuffledAnswers.map((answers) => (
-        <button> {answers} </button>
-      ))}  */}
-      {/* Make an array of answers shuffled and map over them to render the button */}
     </div>
   ) : (
     <div className="App">
