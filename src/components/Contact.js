@@ -29,6 +29,9 @@ const Contact = () => {
     <div className="Homebody">
         <form onSubmit={handleSubmit}>
       <div>
+        <h1>How did you like the game?</h1>
+        <StarRating />
+        <h1>Contact Us</h1>
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" required />
      </div>
@@ -44,8 +47,8 @@ const Contact = () => {
     </form>
     <br></br>
     <br></br>
-    <p>Please give your feedback</p>
-    <StarRating />
+    
+    
     </div>
    
   );

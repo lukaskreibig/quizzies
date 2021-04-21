@@ -22,16 +22,4 @@ p {
     font-size: 2vmin;
 }
 
-/* StarRating for Player */
-
-input[type="radio"] {
-    display:none;
-}
-
-.star {
-    cursor: pointer; 
-    transition: color 200ms; 
-}
-
-
 
