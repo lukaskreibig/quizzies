@@ -1,25 +1,25 @@
 import React from "react";
 import Select from "react-select";
+import { useState } from "react";
 import "./Topic.css";
 
-const topicSelection = [
-    { label: "General knowledge", value: "General knowledge" },
-    { label: "Books", value: "Books" },
-    { label: "Film", value: "Film" },
-    { label: "Music", value: "Music" },
-    { label: "Television", value: "Television" },
-    { label: "Video Games", value: "Video Games" },
-    { label: "Sport", value: "Sport" },
-    { label: "Geography", value: "Geography" },
-    { label: "Arts", value: "Arts" },
-];
+function Topic({ quizCategories }) {
+  const [quizTopic, setQuizTopic] = useState([]);
 
-function Topic() {
-    return (
-        <div className="Topic">
-            <Select options={topicSelection} />
-        </div>
-    );
+  const newArray = quizCategories.map((category) => {
+    return { label: category.name, id: category.id };
+  });
+
+  return (
+    <div className="Topic">
+      <Select options={newArray} />
+    </div>
+  );
 }
 
 export default Topic;
+
+// https://opentdb.com/api.php?amount=10
+
+// &category=22
+// &difficulty=easy
