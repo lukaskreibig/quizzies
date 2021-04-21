@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 function InputSelect() {
   const [quizCategories, setQuizCategories] = useState([]);
-  const [quizTopic, setQuizTopic] = useState([]);
+  const [quizTopic, setQuizTopic] = useState("empty");
 
   const quizFetch = () => {
     axios
