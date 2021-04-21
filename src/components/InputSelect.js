@@ -15,7 +15,6 @@ function InputSelect() {
       .then((res) => setQuizCategories(res.data.trivia_categories));
   };
 
-  console.log(quizCategories);
   useEffect(quizFetch, []);
 
   return (
