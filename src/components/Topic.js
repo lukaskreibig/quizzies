@@ -7,12 +7,16 @@ function Topic({ quizCategories }) {
   const [quizTopic, setQuizTopic] = useState([]);
 
   const newArray = quizCategories.map((category) => {
-    return { label: category.name, id: category.id };
+    return { value: category.id, label: category.name };
   });
-
+  console.log(newArray);
   return (
     <div className="Topic">
-      <Select options={newArray} />
+      <Select
+        options={newArray}
+        onChange={(event) => setQuizTopic(event.value)}
+      />
+      {console.log(quizTopic)}
     </div>
   );
 }
