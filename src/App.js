@@ -14,8 +14,9 @@ function App() {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route path="/inputselect" component={InputSelect} />
+                <Route path="/quiz" component={Quiz} />
                 <Route path="/contact" component={Contact} />
-                <Route path="/InputSelect" component={InputSelect} />
             </Switch>
         </div>
     );
