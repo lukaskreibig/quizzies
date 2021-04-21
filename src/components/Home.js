@@ -1,15 +1,15 @@
 import "./Home.css";
 import StartBtn from "./StartBtn";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
         <div className="Homebody">
             <h1>Welcome to Trivia Night</h1>
-            <br></br>
-            <br></br>
-            <h2>ENTER THE GAME</h2>
-            <p></p>
-            <StartBtn />
+            <h2>Enter the Game</h2>
+            <Link to="/inputselect">
+                <StartBtn />
+            </Link>
         </div>
     );
 }
