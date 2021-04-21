@@ -12,7 +12,8 @@ function App() {
             <Navbar />
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/InputSelect" component={InputSelect} />
+                <Route path="/inputselect" component={InputSelect} />
+                <Route path="/quiz" component={Quiz} />
             </Switch>
         </div>
     );
