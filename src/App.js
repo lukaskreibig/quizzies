@@ -6,6 +6,7 @@ import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
 import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
+import SocialFollow from "./components/SocialFollow"; 
 
 function App() {
     return (
