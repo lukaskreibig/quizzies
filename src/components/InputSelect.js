@@ -21,14 +21,16 @@ function InputSelect() {
   };
   useEffect(categoriesAPI, []);
 
-  const quizAPI = (quizTopic, quizDifficulty) => {
+  const quizAPI = (topic, difficulty) => {
     axios
       .get(
-        `https://opentdb.com/api.php?amount=10&category=${quizTopic}&${quizDifficulty}`
+        `https://opentdb.com/api.php?type=multiple&amount=10&category=${topic}&${difficulty}`
       )
       .then((res) => setQuizArray(res.data.results));
   };
-  useEffect(quizAPI, [quizDifficulty]);
+  useEffect(() => {
+    quizAPI(quizTopic, quizDifficulty);
+  }, [quizTopic, quizDifficulty]);
 
   console.log(quizDifficulty);
   console.log(quizTopic);
@@ -51,7 +53,7 @@ function InputSelect() {
         <Topic quizCategories={quizCategories} changeTopic={changeTopic} />
       </div>
       <Difficulty changeDifficulty={changeDifficulty} />
-
+      <Quiz quizArray={quizArray} />
       <Link to="/quiz">
         <h1>START</h1>
       </Link>
