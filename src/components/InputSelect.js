@@ -8,21 +8,25 @@ import { useEffect, useState } from "react";
 
 function InputSelect() {
   const [quizCategories, setQuizCategories] = useState([]);
+  const [quizTopic, setQuizTopic] = useState("empty");
 
   const quizFetch = () => {
     axios
       .get("https://opentdb.com/api_category.php")
       .then((res) => setQuizCategories(res.data.trivia_categories));
   };
-
-  console.log(quizCategories);
   useEffect(quizFetch, []);
+
+  const changeTopic = (event) => {
+    setQuizTopic(event.value);
+    console.log(quizTopic);
+  };
 
   return (
     <div className="Input">
       <div className="Topic">
         <h2>Search for a topic:</h2>
-        <Topic quizCategories={quizCategories} />
+        <Topic quizCategories={quizCategories} changeTopic={changeTopic} />
       </div>
       <div className="Difficulty">
         <h2>Choose a difficulty level:</h2>
