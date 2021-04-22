@@ -22,6 +22,7 @@ p {
     font-size: 2vmin;
 }
 
+/*Styling for social media icons */
 .social-container {
     background: #0d482c;
     padding: 25px 50px;
@@ -51,4 +52,10 @@ p {
   
   a.instagram {
     color: black;
+  }
+
+
+  /*Styling for Menu/Navbar */
+  .main-navbar {
+      background-color: white; 
   }
