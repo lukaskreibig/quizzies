@@ -1,4 +1,4 @@
-function Quiz(quizArray) {
+function Quiz({ quizArray }) {
   return quizArray.length > 0 ? (
     <div className="App">
       <h2> {quizArray[0].question} </h2>
