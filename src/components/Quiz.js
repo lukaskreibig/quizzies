@@ -1,17 +1,4 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-
-function Quiz() {
-  const [quizArray, setQuizArray] = useState([]);
-
-  const quizFetch = () => {
-    axios
-      .get("https://opentdb.com/api.php?amount=10&type=multiple")
-      .then((res) => setQuizArray(res.data.results));
-  };
-
-  useEffect(quizFetch, []);
-
+function Quiz(quizArray) {
   return quizArray.length > 0 ? (
     <div className="App">
       <h2> {quizArray[0].question} </h2>
