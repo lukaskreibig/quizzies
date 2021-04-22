@@ -7,15 +7,23 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function InputSelect() {
+  const [quizArray, setQuizArray] = useState([]);
   const [quizCategories, setQuizCategories] = useState([]);
   const [quizTopic, setQuizTopic] = useState("empty");
 
-  const quizFetch = () => {
+  const categoriesAPI = () => {
     axios
       .get("https://opentdb.com/api_category.php")
       .then((res) => setQuizCategories(res.data.trivia_categories));
   };
-  useEffect(quizFetch, []);
+  useEffect(categoriesAPI, []);
+
+  const quizAPI = () => {
+    axios
+      .get("https://opentdb.com/api.php?amount=10&type=multiple")
+      .then((res) => setQuizArray(res.data.results));
+  };
+  useEffect(quizAPI, []);
 
   const changeTopic = (event) => {
     setQuizTopic(event.value);
@@ -30,7 +38,8 @@ function InputSelect() {
       </div>
       <div className="Difficulty">
         <h2>Choose a difficulty level:</h2>
-        <Slider />
+        <button>Easy</button> <button>Medium</button> <button>Hard</button>
+        {/* <Slider /> */}
       </div>
       <Link to="/quiz">
         <h1>START</h1>

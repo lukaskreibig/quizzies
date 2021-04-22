@@ -2,25 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
 
 body {
-    background-color: #0d482c;
-    border: thick double #e1af4f;
-    color: #e1af4f;
-    padding: 40px;
-    font-family: "Lato", sans-serif;
-    text-align: center;
+  height: 90vh;
+  background-color: #0d482c;
+  border: thick double #e1af4f;
+  color: #e1af4f;
+  padding: 40px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
 }
 
 h1 {
-    font-family: "Cinzel Decorative", cursive;
-    font-size: 5.9pts;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5.9pts;
 }
 
 h2 {
-    font-size: 3vh;
+  font-size: 3vh;
 }
 
 p {
-    font-size: 2vmin;
+  font-size: 2vmin;
 }
-
-
