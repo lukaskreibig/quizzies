@@ -12,10 +12,11 @@ function Home() {
                 Trivia Night is a quiz game full of surprises! <br></br>
                 Try to answer each question while the clock is running. If you get stuck, use the joker card. <br></br>
                  If you make it to the end, you will be rewarded appropriately.<br></br>
+                 To enter the game, click on the spinning wheel.
                 <br></br>
                  </p>
             <br></br>
-            <h2>Click to start </h2>
+            <h2>START</h2>
             <Link to="/inputselect">
                 <StartBtn />
             </Link>
