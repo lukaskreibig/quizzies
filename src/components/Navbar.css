@@ -7,9 +7,9 @@
   }
 
   .active_class:link {
-    color:  #0d482c!important;
+    color: #0d482c !important;
 }  
 
 .active_class:visited {
-    color:  #0d482c!important;
+    color: red !important;
 }
