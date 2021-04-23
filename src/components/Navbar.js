@@ -16,7 +16,9 @@ const Navbar = () => {
                 Contact
             </NavLink>
             </div>
+            <hr />
         </div>
+        
     );
 };
 
