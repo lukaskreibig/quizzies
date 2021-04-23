@@ -26,7 +26,7 @@ const Contact = () => {
     alert(result.status);
   };
   return (
-    <div className="Homebody">
+    <div className="contact-form">
         <form onSubmit={handleSubmit}>
       <div>
         <h1>How did you like the game?</h1>
@@ -43,6 +43,7 @@ const Contact = () => {
         <label htmlFor="message">Message:</label>
         <textarea id="message" required />
       </div>
+      <br></br>
       <button type="submit">{status}</button>
     </form>
     <br></br>
