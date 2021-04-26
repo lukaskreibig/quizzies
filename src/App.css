@@ -3,10 +3,10 @@
 
 body {
     background-color: #0d482c;
-    color: #e1af4f;
-    padding: 20px;
     font-family: "Lato", sans-serif;
+    color: #E1AF4F;
     text-align: center;
+    height: 100%; 
 }
 
 h1 {
@@ -22,33 +22,3 @@ p {
     font-size: 2vmin;
 }
 
-.social-container {
-    background: #0d482c;
-    padding: 25px 50px;
-  }
-
-  a.social {
-    margin: 0 1rem;
-    transition: transform 250ms;
-    display: inline-block;
-  }
-
-  a.social:hover {
-    transform: translateY(-2px);
-  }
-
-  a.youtube {
-    color: #eb3223;
-  }
-  
-  a.facebook {
-    color: #4968ad;
-  }
-  
-  a.twitter {
-    color: #49a1eb;
-  }
-  
-  a.instagram {
-    color: black;
-  }
