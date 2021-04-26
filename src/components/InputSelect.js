@@ -1,25 +1,49 @@
 import React from "react";
-import Slider from "./Slider";
+// import Slider from "./Slider";
 import Topic from "./Topic";
+import Difficulty from "./Difficulty";
 import "./InputSelect.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Quiz from "./Quiz";
 
 function InputSelect() {
+    const [quizArray, setQuizArray] = useState([]);
     const [quizCategories, setQuizCategories] = useState([]);
-    const [quizTopic, setQuizTopic] = useState("empty");
+    const [quizTopic, setQuizTopic] = useState("");
+    const [quizDifficulty, setQuizDifficulty] = useState("");
 
-    const quizFetch = () => {
+    const categoriesAPI = () => {
         axios
             .get("https://opentdb.com/api_category.php")
             .then((res) => setQuizCategories(res.data.trivia_categories));
     };
-    useEffect(quizFetch, []);
+    useEffect(categoriesAPI, []);
+
+    const quizAPI = (topic, difficulty) => {
+        axios
+            .get(
+                `https://opentdb.com/api.php?type=multiple&amount=10&category=${topic}&${difficulty}`
+            )
+            .then((res) => setQuizArray(res.data.results));
+    };
+    useEffect(() => {
+        quizAPI(quizTopic, quizDifficulty);
+    }, [quizTopic, quizDifficulty]);
+
+    console.log(quizDifficulty);
+    console.log(quizTopic);
+    console.log(quizArray);
 
     const changeTopic = (event) => {
         setQuizTopic(event.value);
         console.log(quizTopic);
+    };
+
+    const changeDifficulty = (event) => {
+        setQuizDifficulty(event.target.value);
+        console.log(quizDifficulty);
     };
 
     return (
@@ -31,15 +55,12 @@ function InputSelect() {
                     changeTopic={changeTopic}
                 />
             </div>
-            <div className="Difficulty">
-                <h2>Choose a difficulty level:</h2>
-                <Slider />
+            <div className="diffbtn">
+                <Difficulty changeDifficulty={changeDifficulty} />
             </div>
-            <div className="ClickableTitle">
-                <Link to="/quiz">
-                    <h1>START</h1>
-                </Link>
-            </div>
+            <Link to="/quiz">
+                <h1>START</h1>
+            </Link>
         </div>
     );
 }
