@@ -8,28 +8,23 @@ function Quiz({ quizArray }) {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
 
+  console.log(answers);
+
   //iterates through all the answers, randomizes them and puts them in the state "answers"
+
   for (let i = 0; i < quizArray.length; i++) {
     answers.push(
       [quizArray[i].correct_answer, ...quizArray[i].incorrect_answers]
         .map((a) => ({ sort: Math.random(), value: a }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value)
-        .map((answer) => ({
+        .map((answer, index) => ({
+          id: index,
           answerText: answer,
           isCorrect: answer === quizArray[i].correct_answer ? true : false,
         }))
-      // if answer === quizArray[i].correct_answer
     );
   }
-  console.log(currentQuestion);
-  console.log(answers);
-
-  // let shuffledAnswers = questions
-  //   .map((a) => ({ sort: Math.random(), value: a }))
-  //   .sort((a, b) => a.sort - b.sort)
-  //   .map((a) => a.value);
-  // console.log(shuffledAnswers, "shuffled");
 
   //updating score according to answer selected
   const handleAnswerOptionClick = (isCorrect) => {
@@ -41,6 +36,19 @@ function Quiz({ quizArray }) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+    }
+  };
+
+  const fiftyJoker = () => {
+    if (answers[0].length > 2) {
+      let randomNr1 = Math.floor(Math.random() * 4);
+      console.log(randomNr1);
+      const jokerAnswers = answers[0].filter(
+        answers.isCorrect !== true
+          ? (answers) => answers.id !== randomNr1
+          : null
+      );
+      console.log(jokerAnswers);
     }
   };
 
@@ -62,7 +70,7 @@ function Quiz({ quizArray }) {
           <div className="answer-section">
             {/*List of answers*/}
 
-            {answers[currentQuestion].map((answerOption) => (
+            {answers[currentQuestion].map((answerOption, index) => (
               <button
                 onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
               >
@@ -85,6 +93,9 @@ function Quiz({ quizArray }) {
               <h2>
                 Question {currentQuestion + 1}/{quizArray.length}
               </h2>
+            </div>
+            <div className="joker">
+              <button onClick={() => fiftyJoker()}>50%</button>
             </div>
           </div>
         </>
