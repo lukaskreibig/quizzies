@@ -14,26 +14,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
-.Input h1 {
+h1 {
     color: #e1af4f;
     text-shadow: 4px 4px 6px black;
-    transition: 0.3s;
 }
 
-.Input h1:link {
+h1:link {
     text-decoration: none;
 }
-.Input h1:hover {
-    font-size: 38px;
-}
-
-.ClickableTitle {
-    align-items: center;
-    height: 100px;
-    text-decoration: none;
-    text-decoration: none;
+h1:hover {
+    font-size: 40px;
 }

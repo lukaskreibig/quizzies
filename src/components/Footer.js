@@ -11,7 +11,7 @@ import SocialFollow from "./SocialFollow";
 const Footer = () => {
     return (
         <div className="main-footer">
-        <hr style={{width: 800 }} />
+        <hr style={{ width: 800 }} />
         <hr /> 
         <SocialFollow />
             <div className="row">

@@ -1,7 +1,7 @@
 .main-footer{
     padding-top: 3em; 
-    position: relative; 
-    bottom: 0; 
+    position: absolute; 
+    bottom: 0;
     width: 100%;
 }
 
@@ -10,3 +10,42 @@ hr {
     height: 1px;
     background-color: #e1af4f;
 }
+
+.col-sm{
+    font-size: 10px;
+}
+
+/* -- Styling of the social media icons ---*/
+.social-container {
+    background: #0d482c;
+    padding: 5px 10px;
+  }
+
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+    font-size: 12px;
+  }
+
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+
+  a.youtube {
+    color: #e1af4f;
+  }
+  
+  a.facebook {
+    color: #e1af4f;
+  }
+  
+  a.twitter {
+    color: #e1af4f;
+  }
+  
+  a.instagram {
+    color: #e1af4f;
+  }
+
+  

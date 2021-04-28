@@ -1,0 +1,15 @@
+.menu{
+   background-color: #E1AF4F;  
+    padding: 5px;
+    display: flex; 
+    justify-content: space-around; 
+
+  }
+
+  .active_class:link {
+    color: #0d482c !important;
+}  
+
+.active_class:visited {
+    color: red !important;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "react-select";
 
+//style the dropdown menu
 const customStyles = {
     container: (provided, state) => ({
         ...provided,
@@ -61,6 +62,7 @@ const customStyles = {
         fontStyle: "bold",
     }),
 };
+//end of styling part
 
 function Topic({ quizCategories, changeTopic }) {
     const newArray = quizCategories.map((category) => {
