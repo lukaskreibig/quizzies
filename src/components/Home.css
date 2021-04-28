@@ -2,11 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 
-#introduction{
+#introduction {
     padding-left: 300px;
-    padding-right: 300px; 
+    padding-right: 300px;
+}
+
+h1:hover {
+    font-family: "Cinzel Decorative", cursive;
+    font-size: 5.9pts;
 }
