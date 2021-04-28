@@ -20,3 +20,21 @@
     height: 50px;
     margin: 10px;
 }
+
+.score-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    color: #d27e4e;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.after-quiz {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
