@@ -8,13 +8,13 @@ import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import SocialFollow from "./components/SocialFollow";
 
 function App() {
   const [quizArray, setQuizArray] = useState([]);
   const [quizCategories, setQuizCategories] = useState([]);
   const [quizTopic, setQuizTopic] = useState("");
   const [quizDifficulty, setQuizDifficulty] = useState("");
+  const [answers, setAnswers] = useState([]);
 
   const categoriesAPI = () => {
     axios
@@ -34,18 +34,28 @@ function App() {
     quizAPI(quizTopic, quizDifficulty);
   }, [quizTopic, quizDifficulty]);
 
-  console.log(quizDifficulty);
-  console.log(quizTopic);
-  console.log(quizArray);
+  //iterates through all the answers, randomizes them and puts them in the state "answers"
+  const randomizeThis = () => {
+    for (let i = 0; i < quizArray.length; i++) {
+      answers.push(
+        [quizArray[i].correct_answer, ...quizArray[i].incorrect_answers]
+          .map((a) => ({ sort: Math.random(), value: a }))
+          .sort((a, b) => a.sort - b.sort)
+          .map((a) => a.value)
+          .map((answer) => ({
+            answerText: answer,
+            isCorrect: answer === quizArray[i].correct_answer ? true : false,
+          }))
+      );
+    }
+  };
 
   const changeTopic = (event) => {
     setQuizTopic(event.value);
-    console.log(quizTopic);
   };
 
   const changeDifficulty = (event) => {
     setQuizDifficulty(event.target.value);
-    console.log(quizDifficulty);
   };
 
   return (
@@ -61,10 +71,14 @@ function App() {
               quizCategories={quizCategories}
               changeTopic={changeTopic}
               changeDifficulty={changeDifficulty}
+              randomizeThis={randomizeThis}
             />
           )}
         />
-        <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
+        <Route
+          path="/quiz"
+          render={() => <Quiz quizArray={quizArray} answers={answers} />}
+        />
         <Route path="/contact" component={Contact} />
       </Switch>
       <Footer />

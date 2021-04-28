@@ -4,20 +4,13 @@ import Topic from "./Topic";
 import Difficulty from "./Difficulty";
 import "./InputSelect.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
-function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
-  // const quizAPI = (topic, difficulty) => {
-  //   axios
-  //     .get(
-  //       `https://opentdb.com/api.php?type=multiple&amount=10&category=${topic}&${difficulty}`
-  //     )
-  //     .then((res) => setQuizArray(res.data.results));
-  // };
-  // useEffect(() => {
-  //   quizAPI(quizTopic, quizDifficulty);
-  // }, [quizTopic, quizDifficulty]);
-
+function InputSelect({
+  quizCategories,
+  changeTopic,
+  changeDifficulty,
+  randomizeThis,
+}) {
   return (
     <div className="Input">
       <div className="Topic">
@@ -27,7 +20,7 @@ function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
       <div className="diffbtn">
         <Difficulty changeDifficulty={changeDifficulty} />
       </div>
-      <Link to="/quiz">
+      <Link to="/quiz" onClick={randomizeThis()}>
         <h1>START</h1>
       </Link>
     </div>
