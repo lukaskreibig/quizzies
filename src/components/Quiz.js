@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./Quizz.css";
 
 function Quiz({ quizArray }) {
@@ -29,12 +28,6 @@ function Quiz({ quizArray }) {
     );
   }
   console.log(answers);
-
-  // let shuffledAnswers = questions
-  //   .map((a) => ({ sort: Math.random(), value: a }))
-  //   .sort((a, b) => a.sort - b.sort)
-  //   .map((a) => a.value);
-  // console.log(shuffledAnswers, "shuffled");
 
   //updating score according to answer selected
   const handleAnswerOptionClick = (isCorrect) => {
