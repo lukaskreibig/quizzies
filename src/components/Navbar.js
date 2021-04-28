@@ -18,7 +18,6 @@ const Navbar = () => {
             </div>
             <hr />
         </div>
-        
     );
 };
 
