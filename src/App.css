@@ -2,63 +2,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
 
 body {
-    background-color: #0d482c;
-    font-family: "Lato", sans-serif;
-    color: #E1AF4F;
-    height: 100%; 
+  background-color: #0d482c;
+  font-family: "Lato", sans-serif;
+  color: #e1af4f;
+  height: 100%;
 }
 
 h1 {
-    font-family: "Cinzel Decorative", cursive;
-    font-size: 5.9pts;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5.9pts;
 }
 
 h2 {
-    font-size: 3vh;
+  font-size: 3vh;
 }
 
 p {
-    font-size: 2vmin;
-<<<<<<< HEAD
+  font-size: 2vmin;
 }
 
 /*Styling for social media icons */
 .social-container {
-    background: #0d482c;
-    padding: 25px 50px;
-  }
-
-  a.social {
-    margin: 0 1rem;
-    transition: transform 250ms;
-    display: inline-block;
-  }
-
-  a.social:hover {
-    transform: translateY(-2px);
-  }
-
-  a.youtube {
-    color: #eb3223;
-  }
-  
-  a.facebook {
-    color: #4968ad;
-  }
-  
-  a.twitter {
-    color: #49a1eb;
-  }
-  
-  a.instagram {
-    color: black;
-  }
-
-
-  /*Styling for Menu/Navbar */
-  .main-navbar {
-      background-color: white; 
-  }
-=======
+  background: #0d482c;
+  padding: 25px 50px;
 }
->>>>>>> 0e78db4298b4d958a5d0ecc2412fc6edd90a23dc
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}
+
+/*Styling for Menu/Navbar */
+.main-navbar {
+  background-color: white;
+}
