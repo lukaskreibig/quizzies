@@ -71,7 +71,7 @@ function Quiz({ quizArray }) {
                                     )
                                 }
                             >
-                                {answers.answerText}
+                                {answerOption.answerText}
                             </button>
                         ))}
 
