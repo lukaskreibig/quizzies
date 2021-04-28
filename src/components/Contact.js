@@ -26,33 +26,38 @@ const Contact = () => {
     alert(result.status);
   };
   return (
-    <div className="contact-form">
-        <form onSubmit={handleSubmit}>
-      <div>
+    <div className="contact-container">
+      <form onSubmit={handleSubmit}>
+
+        <div className="star-feedback">
         <h1>How did you like the game?</h1>
         <StarRating />
-        <h1>Contact Us</h1>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" required />
-     </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" required />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" required />
-      </div>
-      <br></br>
-      <button type="submit">{status}</button>
-    </form>
-    <br></br>
-    <br></br>
-    
-    
+        </div>
+
+        <div className="contact-form">
+          <h1>Contact Us</h1>
+
+          <div>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" required />
+          </div>
+
+          <div className="email">
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" required />
+          </div>
+
+          <div className="message">
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" required />
+          </div>
+
+          <br></br>
+          <button className="submit-button" onClick={() => alert("Thank you for your message")}>submit</button>
+        </div>
+      </form>
     </div>
-   
   );
-};
+}
 
 export default Contact;
