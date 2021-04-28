@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StarRating from "./StarRating";
 import "./Contact.css";
+import Timer from "./Timer";
 
 
 const Contact = () => { 
@@ -56,6 +57,7 @@ const Contact = () => {
           <button className="submit-button" onClick={() => alert("Thank you for your message")}>submit</button>
         </div>
       </form>
+      <Timer />
     </div>
   );
 }
