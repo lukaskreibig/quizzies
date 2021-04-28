@@ -1,35 +1,22 @@
-.main-footer{
-    padding-top: 3em; 
-    position: absolute; 
-    bottom: 0;
-    width: 100%;
-}
 
-hr {
-    border: none;
-    height: 1px;
-    background-color: #e1af4f;
-}
-
-.col-sm{
-    font-size: 10px;
-}
 
 /* -- Styling of the social media icons ---*/
 .social-container {
     background: #0d482c;
-    padding: 5px 10px;
+    display: block; 
+    text-align: center; 
+    bottom: 0px; 
   }
 
   a.social {
-    margin: 0 1rem;
+    margin: 1rem;
     transition: transform 250ms;
     display: inline-block;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   a.social:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
   }
 
   a.youtube {
@@ -48,4 +35,26 @@ hr {
     color: #e1af4f;
   }
 
+
+  #line-one {
+    border: none;
+    height: 1px;
+    background-color: #e1af4f;
+    width: 80%; 
+    display: center;
+}
+ 
+#line-two {
+  border: none; 
+  height: 1px; 
+  background-color: #e1af4f;
+  display: center;
+}
   
+
+  @media only screen and (max-width: 600px) {
+    .social-container { 
+      display: block;
+    }
+
+  }

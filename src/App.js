@@ -8,7 +8,7 @@ import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import SocialFollow from "./components/SocialFollow";
+import SocialFollow from "./components/Footer";
 
 function App() {
   const [quizArray, setQuizArray] = useState([]);

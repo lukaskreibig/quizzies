@@ -1,15 +1,44 @@
-.menu{
-   background-color: #E1AF4F;  
-    padding: 5px;
-    display: flex; 
-    justify-content: space-around; 
 
+
+.navbar{
+    background-color: #E1AF4F;   
+    margin: 0 auto;
+    width: 100%; 
+    text-align: right;
+    display: inline-block;
   }
 
-  .active_class:link {
-    color: #0d482c !important;
-}  
+.nav-links {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none; 
+}
 
-.active_class:visited {
-    color: red !important;
+.active_class:visited {  
+    color: #0d482c  !important;
+    text-decoration: none !important;
+    
+
+}
+
+#home-logo{
+   max-width: 4%;
+   margin-top: 0px;
+   float: left;
+}
+
+#nav-line {
+  color: #E1AF4F;
+  height: 1px;  
+  border: double; 
+  width: 100%;
+}
+
+
+
+/* --- for smart-phone screen ---*/
+@media only screen and (max-width: 600px) {
+  .header{ 
+    width: 100%;
+  }
 }
