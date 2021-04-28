@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import "./Quizz.css";
 
 function Quiz({ quizArray }) {
@@ -23,7 +24,11 @@ function Quiz({ quizArray }) {
         .map((a) => ({ sort: Math.random(), value: a }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value)
-        .map((answer) => ({ answerText: answer, isCorrect: true }))
+        .map((answer) => ({
+          answerText: answer,
+          isCorrect: answer === quizArray[i].correct_answer ? true : false,
+        }))
+
       // if answer === quizArray[i].correct_answer
     );
   }
