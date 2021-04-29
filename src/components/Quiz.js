@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Quizz.css";
+import { Link } from "react-router-dom";
 
 function Quiz({ quizArray }) {
     //Set status to current question
@@ -51,19 +52,61 @@ function Quiz({ quizArray }) {
         <div className="App">
             {showScore ? (
                 <>
-                    <div className="score-section">
-                        <h1>TRIVIA</h1>
-                        <h2>Quiz Result</h2>
-                        <h3>You scored</h3>
-                        <h1>
-                            {score} / {quizArray.length}
-                        </h1>
-                        <h3>You made it to</h3>
-                        {master()}
+                    <div className="result-structure">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td colspan="1">
+                                        <div className="pink-star">★</div>
+                                        <div className="blue-star">★</div>
+                                        <div className="pink-star">★</div>
+                                    </td>
+                                    <td colspan="4">
+                                        <div className="score-section">
+                                            <h1>TRIVIA</h1>
+                                            <h2>Quiz Result</h2>
+                                            <h3>You scored</h3>
+                                            <h1>
+                                                {score} / {quizArray.length}
+                                            </h1>
+                                            <h3>You made it to</h3>
+                                            {master()}
+                                        </div>
+                                    </td>
+                                    <td colspan="1">
+                                        <div className="blue-star">★</div>
+                                        <div className="pink-star">★</div>
+                                        <div className="blue-star">★</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div className="after-quiz">
-                        <button>Give your feedback</button>
-                        <button>Play again</button>
+                        <div className="after-quiz-options">
+                            <h2>Give your feedback</h2>
+                            <button>Give your feedback</button>
+                        </div>
+                        <div className="after-quiz-options">
+                            <h2>Play again</h2>
+                            <div className="img-container-small">
+                                <img
+                                    className="startbtnsmall"
+                                    src="https://i.ibb.co/ZKNdzPR/start-button-without-play.png"
+                                    alt="start button"
+                                />
+                                <Link
+                                    className="link-btn-small"
+                                    to="/inputselect"
+                                >
+                                    <img
+                                        className="playbtnsmall"
+                                        src="https://i.ibb.co/M5fhCSf/start-button-play-only.png"
+                                        alt="play button"
+                                    />
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </>
             ) : (
