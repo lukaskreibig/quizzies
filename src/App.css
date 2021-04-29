@@ -22,7 +22,9 @@ p {
   font-size: 2vmin;
 }
 
-/*Styling for Menu/Navbar */
+
+/*Styling for Navbar */
+
 .menu{
   background-color: #E1AF4F;  
    padding: 2px;
@@ -39,7 +41,6 @@ p {
    font-size: 16px;
  }
 
-
  a:hover{
    color: #D27E4E;
  }
@@ -54,7 +55,7 @@ p {
 }
 
 
-/* Footer */
+/* Styling for Footer */
 .main-footer{
   position: absolute;
   bottom: 10px;
@@ -86,7 +87,9 @@ hr {
     font-size: 13px;
 }
 
-/* -- Styling of the social media icons ---*/
+
+/* Styling of social media icons */
+
 .social-container {
     background: #0d482c;
     padding: 5px 10px;
@@ -119,23 +122,9 @@ hr {
     color: #e1af4f;
   }
 
-  /* styling of InputSelect (difficulty buttons) */
-  
-  .diffbtn {
-    display: flex;
-    justify-content: center;  
-}
 
-.emdbtn{
-    background-color: #1A6340;
-    color: #e1af4f; 
-    box-shadow: 2px 2px 4px black;
-    border: 2px solid #e1af4f;
-    border-radius: 6px;
-    margin: 10px;
-    width: 100px;
-    height: 30px;
-} 
+  
+
 
 /* styling of feedback-button on result page */
 
@@ -193,10 +182,6 @@ hr {
   height: 30px;
 }
 
-
-
-/* StarRating for Player */
-
 input[type="radio"] {
   display:none;
 }
@@ -209,3 +194,81 @@ input[type="radio"] {
 }
 
 
+/* styling of HOME */
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+h1:hover {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5.9pts;
+}
+
+.intro-text{
+  margin-bottom: 30px;
+  display: flex; 
+  justify-content: center;
+  text-align: center;
+}
+
+#intro{
+  font-size: 20px;
+  color: #e1af4f;
+}
+
+/* styling of InputSelect */
+
+.Input {
+  margin-top: 50px;
+}
+
+.Topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.Difficulty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+h1 {
+    color: #e1af4f;
+    text-shadow: 4px 4px 6px black;
+}
+
+h1:link {
+    text-decoration: none;
+}
+
+.start-quiz{
+    display: flex;
+    justify-content: center;
+}
+  
+.diffbtn {
+  display: flex;
+  justify-content: center;  
+}
+
+.emdbtn{
+  background-color: #1A6340;
+  color: #e1af4f; 
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+} 

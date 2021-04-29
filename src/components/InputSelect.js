@@ -2,7 +2,6 @@ import React from "react";
 // import Slider from "./Slider";
 import Topic from "./Topic";
 import Difficulty from "./Difficulty";
-import "./InputSelect.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 

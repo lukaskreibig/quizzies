@@ -1,4 +1,3 @@
-import "./Home.css";
 import StartBtn from "./StartBtn";
 import { Link } from "react-router-dom";
 
