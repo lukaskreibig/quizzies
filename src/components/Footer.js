@@ -1,11 +1,4 @@
-import { FaBlackberry } from "react-icons/fa";
-import { Redirect } from "react-router";
 import SocialFollow from "./SocialFollow";
-
-
-
-
-
 
 const Footer = () => {
     return (
