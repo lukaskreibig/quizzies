@@ -23,7 +23,35 @@ p {
 }
 
 /*Styling for Menu/Navbar */
+.menu{
+  background-color: #E1AF4F;  
+   padding: 2px;
+   text-align: right;
+   position: relative;
+   overflow: hidden;
+ }
 
+ .menu a {
+   padding: 10px;
+   text-decoration: none;
+   color: #0d482c;
+   font-weight: bold;
+   font-size: 16px;
+ }
+
+
+ a:hover{
+   color: #D27E4E;
+ }
+
+#nav-line{
+  margin: 2px;
+}
+
+.logo-nav{
+  width: 50px;
+  float: left;
+}
 
 
 /* Footer */
