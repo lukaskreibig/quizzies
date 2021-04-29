@@ -26,3 +26,8 @@ h1 {
 h1:link {
     text-decoration: none;
 }
+
+.start-quiz{
+    display: flex;
+    justify-content: center;
+}

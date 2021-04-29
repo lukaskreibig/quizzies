@@ -119,4 +119,20 @@ hr {
     color: #e1af4f;
   }
 
+  /* styling of InputSelect (difficulty buttons) */
   
+  .diffbtn {
+    display: flex;
+    justify-content: center;  
+}
+
+.emdbtn{
+  background-color: #1A6340;
+  color: #e1af4f; 
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+} 

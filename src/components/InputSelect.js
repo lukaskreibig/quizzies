@@ -27,9 +27,11 @@ function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
       <div className="diffbtn">
         <Difficulty changeDifficulty={changeDifficulty} />
       </div>
+      <div className="start-quiz">
       <Link to="/quiz">
         <h1>START</h1>
       </Link>
+      </div>
     </div>
   );
 }

@@ -29,12 +29,14 @@
 
 .submit-button{
     cursor: pointer;
-    border: 1px solid #D27E4E;
-    color: #0d482c !important;
-    padding: 8px;
-    min-width: 80px;
-    background: #E1AF4F;
-    border-radius: 10%;
+    background-color: #1A6340;
+    color: #e1af4f; 
+    box-shadow: 2px 2px 4px black;
+    border: 2px solid #e1af4f;
+    border-radius: 6px;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
 }
 
 
