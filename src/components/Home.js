@@ -7,7 +7,8 @@ function Home() {
         <div className="Home">
             <h1>Welcome to Trivia Night</h1>
             <br></br>
-            <p id="introduction">
+            <div className="intro-text">
+            <p id="intro">
                 Trivia Night is a quiz game full of surprises! <br></br>
                 Try to answer each question while the clock is running. If you
                 get stuck, use the joker card. <br></br>
@@ -16,6 +17,7 @@ function Home() {
                 To enter the game, click on the spinning wheel.
                 <br></br>
             </p>
+            </div>
 
             <Link to="/inputselect">
                 <StartBtn />

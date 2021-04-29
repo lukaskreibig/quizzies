@@ -127,6 +127,62 @@ hr {
 }
 
 .emdbtn{
+    background-color: #1A6340;
+    color: #e1af4f; 
+    box-shadow: 2px 2px 4px black;
+    border: 2px solid #e1af4f;
+    border-radius: 6px;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+} 
+
+/* styling of feedback-button on result page */
+
+.feedback-btn{
+    background-color: #1A6340;
+    color: #e1af4f; 
+    box-shadow: 2px 2px 4px black;
+    border: 2px solid #e1af4f;
+    border-radius: 6px;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;  
+}
+
+
+/*  styling of contact page */
+
+.contact-container{
+  text-align: center;
+  margin: 100px;
+}
+
+.contact-form{
+  padding:50px;
+}
+
+.contact-form label{
+  padding: 10px;
+}
+
+.contact-form input{
+  height: 20px;
+  width: 30%
+}
+
+.contact-form textarea{
+  width: 30%;
+  height: 50px;
+}
+
+.email{
+  padding: 10px;
+}
+
+.submit-button{
+  cursor: pointer;
   background-color: #1A6340;
   color: #e1af4f; 
   box-shadow: 2px 2px 4px black;
@@ -135,4 +191,21 @@ hr {
   margin: 10px;
   width: 100px;
   height: 30px;
-} 
+}
+
+
+
+/* StarRating for Player */
+
+input[type="radio"] {
+  display:none;
+}
+
+.star {
+  cursor: pointer; 
+  transition: color 200ms; 
+  padding: 10px;
+
+}
+
+

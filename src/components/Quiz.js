@@ -84,8 +84,12 @@ function Quiz({ quizArray }) {
                     </div>
                     <div className="after-quiz">
                         <div className="after-quiz-options">
-                            <h2>Give your feedback</h2>
-                            <button>Give your feedback</button>
+                        <h2>Did you like the game?</h2>
+                            <Link
+                            className="link-feedback-btn"
+                            to="/contact">
+                            <button className="feedback-btn">Feedback</button>
+                            </Link>
                         </div>
                         <div className="after-quiz-options">
                             <h2>Play again</h2>

@@ -6,12 +6,17 @@
     padding-bottom: 50px;
 }
 
-#introduction {
-    padding-left: 300px;
-    padding-right: 300px;
-}
+
 
 h1:hover {
     font-family: "Cinzel Decorative", cursive;
     font-size: 5.9pts;
+}
+
+.intro-text{
+    margin-bottom: 30px;
+}
+
+#intro{
+    font-size: 20px;
 }
