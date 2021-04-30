@@ -3,9 +3,10 @@
 
 body {
   background-color: #0d482c;
+  border: thick double #e1af4f;
   font-family: "Lato", sans-serif;
   color: #e1af4f;
-  height: 100%;
+  height: 97.3vh;
 }
 
 h1 {
@@ -21,16 +22,81 @@ p {
   font-size: 2vmin;
 }
 
-/*Styling for social media icons */
+/*Styling for Navbar */
+
+.menu {
+  background-color: #e1af4f;
+  padding: 2px;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: #0d482c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #d27e4e;
+}
+
+#nav-line {
+  margin: 2px;
+}
+
+.logo-nav {
+  width: 50px;
+  float: left;
+}
+
+/* Styling for Footer */
+.main-footer {
+  position: absolute;
+  bottom: 10px;
+  width: 99%;
+}
+
+.footer-content {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+#line-one-footer {
+  width: 80%;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e1af4f;
+}
+
+.col-sm {
+  font-size: 13px;
+}
+
+/* Styling of social media icons */
+
 .social-container {
   background: #0d482c;
-  padding: 25px 50px;
+  padding: 5px 10px;
 }
 
 a.social {
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
+  font-size: 15px;
 }
 
 a.social:hover {
@@ -38,22 +104,171 @@ a.social:hover {
 }
 
 a.youtube {
-  color: #eb3223;
+  color: #e1af4f;
 }
 
 a.facebook {
-  color: #4968ad;
+  color: #e1af4f;
 }
 
 a.twitter {
-  color: #49a1eb;
+  color: #e1af4f;
 }
 
 a.instagram {
-  color: black;
+  color: #e1af4f;
 }
 
-/*Styling for Menu/Navbar */
-.main-navbar {
-  background-color: white;
+/* styling of feedback-button on result page */
+
+.feedback-btn {
+  background-color: #1a6340;
+  color: #e1af4f;
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/*  styling of contact page */
+
+.contact-container {
+  text-align: center;
+  margin: 100px;
+}
+
+.contact-form {
+  padding: 50px;
+}
+
+.contact-form label {
+  padding: 10px;
+}
+
+.contact-form input {
+  height: 20px;
+  width: 30%;
+}
+
+.contact-form textarea {
+  width: 30%;
+  height: 50px;
+}
+
+.email {
+  padding: 10px;
+}
+
+.submit-button {
+  cursor: pointer;
+  background-color: #1a6340;
+  color: #e1af4f;
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+  padding: 10px;
+}
+
+/* styling of HOME */
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+h1:hover {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 5.9pts;
+}
+
+.intro-text {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#intro {
+  font-size: 20px;
+  color: #e1af4f;
+}
+
+/* styling of InputSelect */
+
+.Input {
+  margin-top: 50px;
+}
+
+.Topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.Difficulty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+h1 {
+  color: #e1af4f;
+  text-shadow: 4px 4px 6px black;
+}
+
+h1:link {
+  text-decoration: none;
+}
+
+.start-quiz {
+  display: flex;
+  justify-content: center;
+}
+
+.diffbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.emdbtn {
+  background-color: #1a6340;
+  color: #e1af4f;
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 110px;
+  height: 38px;
+}
+
+.emdbtn:active {
+  background-color: #0b2b1b;
+  box-shadow: 2px 2px 2px black;
+}
+
+.emdbtn:focus {
+  background-color: #e1af4f;
+  color: #1a6340;
 }

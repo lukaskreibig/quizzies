@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Quizz.css";
+import { Link } from "react-router-dom";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -8,8 +9,7 @@ function Quiz({ quizArray }) {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
 
-  console.log(answers);
-
+  console.log(score);
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
   for (let i = 0; i < quizArray.length; i++) {
@@ -52,46 +52,113 @@ function Quiz({ quizArray }) {
     }
   };
 
+  const master = () => {
+    if (+score < 4) {
+      return <h1>Quiz Newbie!</h1>;
+    } else if (+score > 7) {
+      return <h1>Quiz Master!</h1>;
+    } else {
+      return <h1>Quiz Padawan!</h1>;
+    }
+  };
+
   return quizArray.length > 0 ? (
     <div className="App">
       {showScore ? (
-        <div className="score-section">
-          You scored {score} out of {quizArray.length}
-        </div>
+        <>
+          <div className="result-structure">
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="1">
+                    <div className="pink-star">★</div>
+                    <div className="blue-star">★</div>
+                    <div className="pink-star">★</div>
+                  </td>
+                  <td colspan="4">
+                    <div className="score-section">
+                      <h1>TRIVIA</h1>
+                      <h2>Quiz Result</h2>
+                      <h3>You scored</h3>
+                      <h1>
+                        {score} / {quizArray.length}
+                      </h1>
+                      <h3>You made it to</h3>
+                      {master()}
+                    </div>
+                  </td>
+                  <td colspan="1">
+                    <div className="blue-star">★</div>
+                    <div className="pink-star">★</div>
+                    <div className="blue-star">★</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="after-quiz">
+            <div className="after-quiz-options">
+              <h2>Did you like the game?</h2>
+              <Link className="link-feedback-btn" to="/contact">
+                <button className="feedback-btn">Feedback</button>
+              </Link>
+            </div>
+            <div className="after-quiz-options">
+              <h2>Play again</h2>
+              <div className="img-container-small">
+                <img
+                  className="startbtnsmall"
+                  src="https://i.ibb.co/ZKNdzPR/start-button-without-play.png"
+                  alt="start button"
+                />
+                <Link className="link-btn-small" to="/inputselect">
+                  <img
+                    className="playbtnsmall"
+                    src="https://i.ibb.co/M5fhCSf/start-button-play-only.png"
+                    alt="play button"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </>
       ) : (
         <>
           {/*display current question*/}
           <div className="question-section">
             <h1 className="question-text">
-              {quizArray[currentQuestion].question}
+              {quizArray[currentQuestion].question
+                .replace(/&quot;/g, '"')
+                .replace(/;&#039;/g, "'")
+                .replace(/&#039;/g, "'")
+                .replace(/&rsquo;/g, "'")}
             </h1>
           </div>
           {/*display list of answers to the current question*/}
           <div className="answer-section">
-            {/*List of answers*/}
-
-            {answers[currentQuestion].map((answerOption, index) => (
-              <button
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
-              </button>
-            ))}
-
-            {/*{answers.map((answer) => (
-                        <button
-                            className="answer-btn"
-                            onClick={() =>
-                                handleAnswerOptionClick(answer.isCorrect)
-                            }
-                        >
-                            {answer}
-                        </button>
-                        ))}/*}
-                        {/*display question number out of 10*/}
+            <div className="answers-flex">
+              {/*List of answers*/}
+              {answers[currentQuestion].map((answerOption) => (
+                <button
+                  className="questionbtn"
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answerText
+                    .replace(/&quot;/g, '"')
+                    .replace(/;&#039;/g, "'")
+                    .replace(/&#039;/g, "'")
+                    .replace(/&rsquo;/g, "'")}
+                </button>
+              ))}
+            </div>
+          </div>
+          {/*display question number out of 10*/}
+          <div className="question-count-container">
             <div className="question-count">
               <h2>
-                Question {currentQuestion + 1}/{quizArray.length}
+                {currentQuestion + 1}/{quizArray.length}
               </h2>
             </div>
             <div className="joker">
