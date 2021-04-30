@@ -3,51 +3,50 @@ import "./Quizz.css";
 import { Link } from "react-router-dom";
 
 function Quiz({ quizArray }) {
-    //Set status to current question
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showScore, setShowScore] = useState(false);
-    const [score, setScore] = useState(0);
-    const [answers, setAnswers] = useState([]);
+  //Set status to current question
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+  const [answers, setAnswers] = useState([]);
 
-    console.log(score);
-    //iterates through all the answers, randomizes them and puts them in the state "answers"
-    for (let i = 0; i < quizArray.length; i++) {
-        answers.push(
-            [quizArray[i].correct_answer, ...quizArray[i].incorrect_answers]
-                .map((a) => ({ sort: Math.random(), value: a }))
-                .sort((a, b) => a.sort - b.sort)
-                .map((a) => a.value)
-                .map((answer) => ({
-                    answerText: answer,
-                    isCorrect:
-                        answer === quizArray[i].correct_answer ? true : false,
-                }))
-        );
+  console.log(score);
+  //iterates through all the answers, randomizes them and puts them in the state "answers"
+  for (let i = 0; i < quizArray.length; i++) {
+    answers.push(
+      [quizArray[i].correct_answer, ...quizArray[i].incorrect_answers]
+        .map((a) => ({ sort: Math.random(), value: a }))
+        .sort((a, b) => a.sort - b.sort)
+        .map((a) => a.value)
+        .map((answer) => ({
+          answerText: answer,
+          isCorrect: answer === quizArray[i].correct_answer ? true : false,
+        }))
+    );
+  }
+
+  //updating score according to answer selected
+  const handleAnswerOptionClick = (isCorrect) => {
+    if (isCorrect) {
+      setScore(score + 1);
     }
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < quizArray.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+    }
+  };
 
-    //updating score according to answer selected
-    const handleAnswerOptionClick = (isCorrect) => {
-        if (isCorrect) {
-            setScore(score + 1);
-        }
-        const nextQuestion = currentQuestion + 1;
-        if (nextQuestion < quizArray.length) {
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }
-    };
-
-    const master = () => {
-        if (+score < 4) {
-            return <h1>Quiz Newbie!</h1>;
-        } else if (+score > 7) {
-            return <h1>Quiz Master!</h1>;
-        } else {
-            return <h1>Quiz Padawan!</h1>;
-        }
-    };
-
+  const master = () => {
+    if (+score < 4) {
+      return <h1>Quiz Newbie!</h1>;
+    } else if (+score > 7) {
+      return <h1>Quiz Master!</h1>;
+    } else {
+      return <h1>Quiz Padawan!</h1>;
+    }
+  };
+  
     return quizArray.length > 0 ? (
         <div className="App">
             {showScore ? (
