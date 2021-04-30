@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import StarRating from "./StarRating";
-import "./Contact.css";
-
 
 const Contact = () => { 
     const [status, setStatus] = useState("Submit");
