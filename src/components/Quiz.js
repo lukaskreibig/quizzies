@@ -66,11 +66,15 @@ function Quiz({ quizArray }) {
                                             <h1>TRIVIA</h1>
                                             <h2>Quiz Result</h2>
                                             <h3>You scored</h3>
-                                            <h1>
-                                                {score} / {quizArray.length}
-                                            </h1>
+                                            <div className="final-score-height">
+                                                <h1 className="final-score">
+                                                    {score} / {quizArray.length}
+                                                </h1>
+                                            </div>
                                             <h3>You made it to</h3>
-                                            {master()}
+                                            <div className="master-level">
+                                                {master()}
+                                            </div>
                                         </div>
                                     </td>
                                     <td colspan="1">
@@ -84,11 +88,11 @@ function Quiz({ quizArray }) {
                     </div>
                     <div className="after-quiz">
                         <div className="after-quiz-options">
-                        <h2>Did you like the game?</h2>
-                            <Link
-                            className="link-feedback-btn"
-                            to="/contact">
-                            <button className="feedback-btn">Feedback</button>
+                            <h2>Did you like the game?</h2>
+                            <Link className="link-feedback-btn" to="/contact">
+                                <button className="feedback-btn">
+                                    Feedback
+                                </button>
                             </Link>
                         </div>
                         <div className="after-quiz-options">

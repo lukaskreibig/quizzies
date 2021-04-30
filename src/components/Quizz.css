@@ -106,11 +106,41 @@ h3 {
     justify-content: center;
 }
 
+.final-score-height {
+    height: 90px;
+}
+
+.final-score {
+    font-size: 50px;
+    animation: textgrowth 1s;
+    margin-top: 10px;
+}
+
+.master-level {
+    font-size: 20px;
+    animation: fade 1.3s ease-in;
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(359deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes textgrowth {
+    0% {
+        font-size: 25px;
+    }
+    100% {
+        font-size: 50px;
     }
 }
