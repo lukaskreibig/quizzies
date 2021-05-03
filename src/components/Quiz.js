@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Quizz.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -8,6 +8,7 @@ function Quiz({ quizArray }) {
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [correctAnswer, setCorrectAnswer] = useState(null);
 
   console.log(score);
   //iterates through all the answers, randomizes them and puts them in the state "answers"
@@ -17,7 +18,8 @@ function Quiz({ quizArray }) {
         .map((a) => ({ sort: Math.random(), value: a }))
         .sort((a, b) => a.sort - b.sort)
         .map((a) => a.value)
-        .map((answer) => ({
+        .map((answer, index) => ({
+          nr: index,
           answerText: answer,
           isCorrect: answer === quizArray[i].correct_answer ? true : false,
         }))
@@ -25,9 +27,17 @@ function Quiz({ quizArray }) {
   }
 
   //updating score according to answer selected
-  const handleAnswerOptionClick = (isCorrect) => {
+  const handleAnswerOptionClick = (isCorrect, answerNr) => {
     if (isCorrect) {
       setScore(score + 1);
+      setCorrectAnswer(answerNr);
+
+      // setAnswerClass("questioncorrect");
+      // setTimeout(function () {
+      //   setAnswerClass("questionbtn");
+      // }, 300);
+
+      console.log("this happens");
     }
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizArray.length) {
@@ -47,7 +57,8 @@ function Quiz({ quizArray }) {
     }
   };
 
-  const changeButton = { background: "steelblue" };
+  console.log(answers);
+  console.log(correctAnswer);
 
   return quizArray.length > 0 ? (
     <div className="App">
@@ -127,12 +138,16 @@ function Quiz({ quizArray }) {
           <div className="answer-section">
             <div className="answers-flex">
               {/*List of answers*/}
-              {answers[currentQuestion].map((answerOption) => (
-                <div style={changeButton}>
+              {answers[currentQuestion].map((answerOption, index) => (
+                <div>
                   <button
                     className="questionbtn"
+                    id={index}
                     onClick={() =>
-                      handleAnswerOptionClick(answerOption.isCorrect)
+                      handleAnswerOptionClick(
+                        answerOption.isCorrect,
+                        answerOption.nr
+                      )
                     }
                   >
                     {answerOption.answerText

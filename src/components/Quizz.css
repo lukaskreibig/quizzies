@@ -13,6 +13,19 @@
   transition: 0.3s;
 }
 
+#correct {
+  font-size: 19px;
+  background-color: greenyellow;
+  color: #e1af4f;
+  box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 500px;
+  height: 70px;
+  animation: blinking 0.3s;
+}
+
 .questionbtn:active {
   background-color: #0b2b1b;
   box-shadow: 2px 2px 2px black;
@@ -178,5 +191,14 @@ h3 {
   }
   100% {
     font-size: 50px;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    background-color: #1a6340;
+  }
+  100% {
+    background-color: rgb(0, 255, 136);
   }
 }
