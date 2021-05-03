@@ -40,14 +40,16 @@ function Quiz({ quizArray }) {
   };
 
   const fiftyJoker = () => {
-    if (answers[0].length > 2) {
+    if (answers[currentQuestion].length > 2) {
       let randomNr1 = Math.floor(Math.random() * 4);
       console.log(randomNr1);
-      const jokerAnswers = answers[0].filter(
-        answers.isCorrect !== true
-          ? (answers) => answers.id !== randomNr1
-          : null
-      );
+      console.log(answers[0]);
+      const jokerAnswers = answers[0].map((answer, index) => {
+        if (answer.isCorrect !== true) {
+          console.log("false answer");
+        }
+      });
+
       console.log(jokerAnswers);
     }
   };
