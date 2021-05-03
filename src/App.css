@@ -272,3 +272,21 @@ h1:link {
   background-color: #e1af4f;
   color: #1a6340;
 }
+
+.quit-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.quit-game-btn {
+  background-color: #1a6340;
+  color: #d27e4e;
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #d27e4e;
+  border-radius: 6px;
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+

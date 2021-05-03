@@ -150,6 +150,7 @@ function Quiz({ quizArray }) {
                                 </button>
                             ))}
                         </div>
+                        
                     </div>
                     {/*display question number out of 10*/}
                     <div className="question-count-container">
@@ -161,6 +162,13 @@ function Quiz({ quizArray }) {
                     </div>
                 </>
             )}
+            <div className="quit-btn-container">
+                <Link className="quit-btn" to="/InputSelect">
+                    <button className="quit-game-btn">
+                         Quit
+                    </button>
+                </Link>
+             </div>
         </div>
     ) : (
         <div className="App">
