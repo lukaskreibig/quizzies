@@ -1,182 +1,182 @@
 /* styling of Quiz Component */
 
 .questionbtn {
-    font-size: 19px;
-    background-color: #1a6340;
-    color: #e1af4f;
-    box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
-    border: 2px solid #e1af4f;
-    border-radius: 6px;
-    margin: 10px;
-    width: 500px;
-    height: 70px;
-    transition: 0.3s;
+  font-size: 19px;
+  background-color: #1a6340;
+  color: #e1af4f;
+  box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin: 10px;
+  width: 500px;
+  height: 70px;
+  transition: 0.3s;
 }
 
 .questionbtn:active {
-    background-color: +#0b2b1b;
-    box-shadow: 2px 2px 2px black;
-    transform: translateY(4px);
+  background-color: #0b2b1b;
+  box-shadow: 2px 2px 2px black;
+  transform: translateY(4px);
 }
 
 .questionbtn:hover {
-    background-color: #e1af4f;
-    color: #1a6340;
+  background-color: #e1af4f;
+  color: #1a6340;
 }
 
 .question-count-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .answer-section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .answers-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 1100px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1100px;
+  justify-content: center;
 }
 
 .question-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-top: 50px;
-    height: 150px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  height: 150px;
 }
 
 .question-text {
-    width: 1000px;
-    font-size: 30px;
-    text-align: center;
+  width: 1000px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .score-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h3 {
-    color: #d27e4e;
-    margin-top: 20px;
-    margin-bottom: 0;
+  color: #d27e4e;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .result-structure {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .after-quiz {
-    display: flex;
-    justify-content: space-around;
-    margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
 }
 
 .pink-star {
-    font-size: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #e053a8;
-    text-shadow: 1px 1px 0 #e1af4f, -1px 1px 0 #e1af4f, 1px -1px 0 #e1af4f,
-        -1px -1px 0 #e1af4f, 0px 1px 0 #e1af4f, 0px -1px 0 #e1af4f,
-        -1px 0px 0 #e1af4f, 1px 0px 0 #e1af4f, 2px 2px 0 #e1af4f,
-        -2px 2px 0 #e1af4f, 2px -2px 0 #e1af4f, -2px -2px 0 #e1af4f,
-        0px 2px 0 #e1af4f, 0px -2px 0 #e1af4f, -2px 0px 0 #e1af4f,
-        2px 0px 0 #e1af4f, 1px 2px 0 #e1af4f, -1px 2px 0 #e1af4f,
-        1px -2px 0 #e1af4f, -1px -2px 0 #e1af4f, 2px 1px 0 #e1af4f,
-        -2px 1px 0 #e1af4f, 2px -1px 0 #e1af4f, -2px -1px 0 #e1af4f;
+  font-size: 50px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #e053a8;
+  text-shadow: 1px 1px 0 #e1af4f, -1px 1px 0 #e1af4f, 1px -1px 0 #e1af4f,
+    -1px -1px 0 #e1af4f, 0px 1px 0 #e1af4f, 0px -1px 0 #e1af4f,
+    -1px 0px 0 #e1af4f, 1px 0px 0 #e1af4f, 2px 2px 0 #e1af4f, -2px 2px 0 #e1af4f,
+    2px -2px 0 #e1af4f, -2px -2px 0 #e1af4f, 0px 2px 0 #e1af4f,
+    0px -2px 0 #e1af4f, -2px 0px 0 #e1af4f, 2px 0px 0 #e1af4f, 1px 2px 0 #e1af4f,
+    -1px 2px 0 #e1af4f, 1px -2px 0 #e1af4f, -1px -2px 0 #e1af4f,
+    2px 1px 0 #e1af4f, -2px 1px 0 #e1af4f, 2px -1px 0 #e1af4f,
+    -2px -1px 0 #e1af4f;
 }
 
 .blue-star {
-    font-size: 50px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #32b8ca;
-    text-shadow: 1px 1px 0 #e1af4f, -1px 1px 0 #e1af4f, 1px -1px 0 #e1af4f,
-        -1px -1px 0 #e1af4f, 0px 1px 0 #e1af4f, 0px -1px 0 #e1af4f,
-        -1px 0px 0 #e1af4f, 1px 0px 0 #e1af4f, 2px 2px 0 #e1af4f,
-        -2px 2px 0 #e1af4f, 2px -2px 0 #e1af4f, -2px -2px 0 #e1af4f,
-        0px 2px 0 #e1af4f, 0px -2px 0 #e1af4f, -2px 0px 0 #e1af4f,
-        2px 0px 0 #e1af4f, 1px 2px 0 #e1af4f, -1px 2px 0 #e1af4f,
-        1px -2px 0 #e1af4f, -1px -2px 0 #e1af4f, 2px 1px 0 #e1af4f,
-        -2px 1px 0 #e1af4f, 2px -1px 0 #e1af4f, -2px -1px 0 #e1af4f;
+  font-size: 50px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #32b8ca;
+  text-shadow: 1px 1px 0 #e1af4f, -1px 1px 0 #e1af4f, 1px -1px 0 #e1af4f,
+    -1px -1px 0 #e1af4f, 0px 1px 0 #e1af4f, 0px -1px 0 #e1af4f,
+    -1px 0px 0 #e1af4f, 1px 0px 0 #e1af4f, 2px 2px 0 #e1af4f, -2px 2px 0 #e1af4f,
+    2px -2px 0 #e1af4f, -2px -2px 0 #e1af4f, 0px 2px 0 #e1af4f,
+    0px -2px 0 #e1af4f, -2px 0px 0 #e1af4f, 2px 0px 0 #e1af4f, 1px 2px 0 #e1af4f,
+    -1px 2px 0 #e1af4f, 1px -2px 0 #e1af4f, -1px -2px 0 #e1af4f,
+    2px 1px 0 #e1af4f, -2px 1px 0 #e1af4f, 2px -1px 0 #e1af4f,
+    -2px -1px 0 #e1af4f;
 }
 
 .after-quiz-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img-container-small {
-    position: relative;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .playbtnsmall {
-    position: absolute;
-    width: 70px;
+  position: absolute;
+  width: 70px;
 }
 
 .startbtnsmall {
-    position: absolute;
-    width: 70px;
-    -webkit-filter: drop-shadow(5px 5px 20px rgb(0, 0, 0));
-    filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
-    animation: rotation 14s infinite linear;
+  position: absolute;
+  width: 70px;
+  -webkit-filter: drop-shadow(5px 5px 20px rgb(0, 0, 0));
+  filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+  animation: rotation 14s infinite linear;
 }
 
 .link-btn-small {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .final-score-height {
-    height: 90px;
+  height: 90px;
 }
 
 .final-score {
-    font-size: 50px;
-    animation: textgrowth 1s;
-    margin-top: 10px;
+  font-size: 50px;
+  animation: textgrowth 1s;
+  margin-top: 10px;
 }
 
 .master-level {
-    font-size: 20px;
-    animation: fade 1.3s ease-in;
+  font-size: 20px;
+  animation: fade 1.3s ease-in;
 }
 
 @keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 }
 
 @keyframes textgrowth {
-    0% {
-        font-size: 25px;
-    }
-    100% {
-        font-size: 50px;
-    }
+  0% {
+    font-size: 25px;
+  }
+  100% {
+    font-size: 50px;
+  }
 }
