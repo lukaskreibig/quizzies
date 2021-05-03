@@ -1,5 +1,3 @@
-import "./StartBtn.css";
-
 const StartBtn = () => {
     return (
         <>
