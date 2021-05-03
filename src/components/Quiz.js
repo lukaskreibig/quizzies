@@ -158,13 +158,13 @@ function Quiz({ quizArray }) {
                             </h2>
                         </div>
                     </div>
+                    <div className="quit-btn-container">
+                        <Link className="quit-btn" to="/InputSelect">
+                            <button className="quit-game-btn">Quit</button>
+                        </Link>
+                    </div>
                 </>
             )}
-            <div className="quit-btn-container">
-                <Link className="quit-btn" to="/InputSelect">
-                    <button className="quit-game-btn">Quit</button>
-                </Link>
-            </div>
         </div>
     ) : (
         <div className="App">
