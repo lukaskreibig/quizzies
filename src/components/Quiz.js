@@ -8,6 +8,8 @@ function Quiz({ quizArray }) {
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
+  const [jokerAnswers, setJokerAnswers] = useState(null);
+  const [joker, setJoker] = useState(false);
 
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
@@ -40,11 +42,8 @@ function Quiz({ quizArray }) {
 
   const fiftyJoker = () => {
     if (answers[currentQuestion].length > 2) {
-      let randomNr1 = Math.floor(Math.random() * 4);
-      console.log(randomNr1);
-      console.log(answers[0]);
       let count = 0;
-      const jokerAnswers = answers[0].map((answer, index) => {
+      const jokerAnswers = answers[currentQuestion].map((answer, index) => {
         if (answer.isCorrect === true) {
           return answer;
         } else if (answer.isCorrect !== true && count < 1) {
@@ -55,8 +54,7 @@ function Quiz({ quizArray }) {
         }
       });
 
-      setAnswers(jokerAnswers);
-      console.log(answers);
+      setJokerAnswers(jokerAnswers);
     }
   };
 
@@ -153,11 +151,17 @@ function Quiz({ quizArray }) {
                     handleAnswerOptionClick(answerOption.isCorrect)
                   }
                 >
-                  {answerOption.answerText
-                    .replace(/&quot;/g, '"')
-                    .replace(/;&#039;/g, "'")
-                    .replace(/&#039;/g, "'")
-                    .replace(/&rsquo;/g, "'")}
+                  {joker
+                    ? jokerAnswers.answerText
+                        .replace(/&quot;/g, '"')
+                        .replace(/;&#039;/g, "'")
+                        .replace(/&#039;/g, "'")
+                        .replace(/&rsquo;/g, "'")
+                    : answerOption.answerText
+                        .replace(/&quot;/g, '"')
+                        .replace(/;&#039;/g, "'")
+                        .replace(/&#039;/g, "'")
+                        .replace(/&rsquo;/g, "'")}
                 </button>
               ))}
             </div>
