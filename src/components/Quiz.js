@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Quizz.css";
 import { Link } from "react-router-dom";
+import { useTransition, animated } from "react-spring";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -10,6 +11,8 @@ function Quiz({ quizArray }) {
   const [answers, setAnswers] = useState([]);
   const [jokerAnswers, setJokerAnswers] = useState(null);
   const [joker, setJoker] = useState(false);
+  const [jokerUsed, setJokerUsed] = useState(false);
+  const [jokerDescription, setJokerDescription] = useState("50 / 50 Joker");
 
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
@@ -42,22 +45,26 @@ function Quiz({ quizArray }) {
   };
 
   const fiftyJoker = () => {
-    if (answers[currentQuestion].length > 2) {
-      let count = 0;
-      const jokerMap = answers[currentQuestion].map((answer, index) => {
-        if (answer.isCorrect === true) {
-          return answer;
-        } else if (answer.isCorrect !== true && count < 1) {
-          count++;
-          return answer;
-        }
-      });
-
-      setJokerAnswers(
-        jokerMap.filter((jokerAnswer) => jokerAnswer !== undefined)
-      );
-      console.log(jokerAnswers);
-      setJoker(true);
+    if (!jokerUsed) {
+      if (answers[currentQuestion].length > 2) {
+        let count = 0;
+        const jokerMap = answers[currentQuestion].map((answer, index) => {
+          if (answer.isCorrect === true) {
+            return answer;
+          } else if (answer.isCorrect !== true && count < 1) {
+            count++;
+            return answer;
+          }
+        });
+        setJokerAnswers(
+          jokerMap.filter((jokerAnswer) => jokerAnswer !== undefined)
+        );
+        console.log(jokerAnswers);
+        setJoker(true);
+        setJokerUsed(true);
+        setJokerDescription("Already used");
+      }
+    } else {
     }
   };
 
@@ -178,6 +185,7 @@ function Quiz({ quizArray }) {
                   ))}
             </div>
           </div>
+
           {/*display question number out of 10*/}
           <div className="question-count-container">
             <div className="question-count">
@@ -186,7 +194,7 @@ function Quiz({ quizArray }) {
               </h2>
             </div>
             <div className="joker">
-              <button onClick={() => fiftyJoker()}>50%</button>
+              <button onClick={() => fiftyJoker()}>{jokerDescription}</button>
             </div>
           </div>
         </>
