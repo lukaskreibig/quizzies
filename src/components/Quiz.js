@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import "./Quizz.css";
 import { Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
+import jokerPic from "./joker-card.png";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -93,14 +93,16 @@ function Quiz({ quizArray }) {
                   </td>
                   <td colspan="4">
                     <div className="score-section">
-                      <h1>TRIVIA</h1>
+                      <h1>TRIVIA NIGHT</h1>
                       <h2>Quiz Result</h2>
                       <h3>You scored</h3>
-                      <h1>
-                        {score} / {quizArray.length}
-                      </h1>
+                      <div className="final-score-height">
+                        <h1 className="final-score">
+                          {score} / {quizArray.length}
+                        </h1>
+                      </div>
                       <h3>You made it to</h3>
-                      {master()}
+                      <div className="master-level">{master()}</div>
                     </div>
                   </td>
                   <td colspan="1">
@@ -194,7 +196,12 @@ function Quiz({ quizArray }) {
               </h2>
             </div>
             <div className="joker">
-              <button onClick={() => fiftyJoker()}>{jokerDescription}</button>
+              <img
+                src={jokerPic}
+                alt="Joker"
+                width="100%"
+                onClick={() => fiftyJoker()}
+              ></img>
             </div>
           </div>
         </>
