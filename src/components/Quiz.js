@@ -12,7 +12,7 @@ function Quiz({ quizArray }) {
   const [jokerAnswers, setJokerAnswers] = useState(null);
   const [joker, setJoker] = useState(false);
   const [jokerUsed, setJokerUsed] = useState(false);
-  const [jokerDescription, setJokerDescription] = useState("50 / 50 Joker");
+  const [jokerCard, setJokerCard] = useState("joker");
 
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
@@ -62,7 +62,7 @@ function Quiz({ quizArray }) {
         console.log(jokerAnswers);
         setJoker(true);
         setJokerUsed(true);
-        setJokerDescription("Already used");
+        setJokerCard("jokerused");
       }
     } else {
     }
@@ -195,7 +195,7 @@ function Quiz({ quizArray }) {
                 {currentQuestion + 1}/{quizArray.length}
               </h2>
             </div>
-            <div className="joker">
+            <div className={jokerCard}>
               <img
                 src={jokerPic}
                 alt="Joker"
