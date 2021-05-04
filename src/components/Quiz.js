@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 //import { useTransition, animated } from "react-spring";
 import jokerPic from "./joker-card.png";
+import Timer from "./Timer";
 
 function Quiz({ quizArray }) {
     //Set status to current question
@@ -229,6 +230,9 @@ function Quiz({ quizArray }) {
                             <Link className="quit-btn" to="/InputSelect">
                                 <button className="quit-game-btn">Quit</button>
                             </Link>
+                        </div>
+                        <div className="timer-container">
+                            <Timer key={currentQuestion} />
                         </div>
                     </div>
                 </>
