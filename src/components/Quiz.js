@@ -62,7 +62,7 @@ function Quiz({ quizArray }) {
                                     </td>
                                     <td colspan="4">
                                         <div className="score-section">
-                                            <h1>TRIVIA</h1>
+                                            <h1>TRIVIA NIGHT</h1>
                                             <h2>Quiz Result</h2>
                                             <h3>You scored</h3>
                                             <div className="final-score-height">
