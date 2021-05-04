@@ -1,3 +1,5 @@
+import Timer from "./Timer";
+
 function Result() {
     return (
         <div>

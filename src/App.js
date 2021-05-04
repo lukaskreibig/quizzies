@@ -7,10 +7,12 @@ import Quiz from "./components/Quiz";
 import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import SocialFollow from "./components/SocialFollow";
+import { useEffect, useState } from "react"; 
+
 
 function App() {
+
+
   const [quizArray, setQuizArray] = useState([]);
   const [quizCategories, setQuizCategories] = useState([]);
   const [quizTopic, setQuizTopic] = useState("");
@@ -48,6 +50,8 @@ function App() {
     console.log(quizDifficulty);
   };
 
+
+
   return (
     <div>
       <Navbar />
@@ -68,7 +72,6 @@ function App() {
         <Route path="/contact" component={Contact} />
       </Switch>
       <Footer />
-      
     </div>
   );
 }

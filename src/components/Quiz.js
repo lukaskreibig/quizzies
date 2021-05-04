@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+import Timer from "./Timer";
+
 
 function Quiz({ quizArray }) {
     //Set status to current question
@@ -37,6 +39,7 @@ function Quiz({ quizArray }) {
         }
     };
 
+
     const master = () => {
         if (+score < 4) {
             return <h1>Quiz Newbie!</h1>;
@@ -46,6 +49,7 @@ function Quiz({ quizArray }) {
             return <h1>Quiz Padawan!</h1>;
         }
     };
+      
 
     return quizArray.length > 0 ? (
         <div className="App">
@@ -162,6 +166,11 @@ function Quiz({ quizArray }) {
                         <Link className="quit-btn" to="/InputSelect">
                             <button className="quit-game-btn">Quit</button>
                         </Link>
+                    </div>
+                    <div className ="timer-container">
+                        <Timer key={currentQuestion} />
+                    </div>
+                    <div>
                     </div>
                 </>
             )}
