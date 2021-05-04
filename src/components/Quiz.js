@@ -51,6 +51,7 @@ function Quiz({ quizArray }) {
         <div className="App">
             {showScore ? (
                 <>
+                    <h1 id="result-title">TRIVIA NIGHT</h1>
                     <div className="result-structure">
                         <table>
                             <tbody>
@@ -62,7 +63,6 @@ function Quiz({ quizArray }) {
                                     </td>
                                     <td colspan="4">
                                         <div className="score-section">
-                                            <h1>TRIVIA NIGHT</h1>
                                             <h2>Quiz Result</h2>
                                             <h3>You scored</h3>
                                             <div className="final-score-height">
@@ -87,10 +87,10 @@ function Quiz({ quizArray }) {
                     </div>
                     <div className="after-quiz">
                         <div className="after-quiz-options">
-                            <h2>Did you like the game?</h2>
+                            <h2>Did you like it?</h2>
                             <Link className="link-feedback-btn" to="/contact">
                                 <button className="feedback-btn">
-                                    Feedback
+                                    Leave your Feedback
                                 </button>
                             </Link>
                         </div>
@@ -120,13 +120,15 @@ function Quiz({ quizArray }) {
                 <>
                     {/*display current question*/}
                     <div className="question-section">
-                        <h1 className="question-text">
+                        <h2 className="question-text">
                             {quizArray[currentQuestion].question
                                 .replace(/&quot;/g, '"')
                                 .replace(/;&#039;/g, "'")
                                 .replace(/&#039;/g, "'")
-                                .replace(/&rsquo;/g, "'")}
-                        </h1>
+                                .replace(/&rsquo;/g, "'")
+                                .replace(/&amp;/g, "&")
+                                .replace(/&ouml;/g, "ö")}
+                        </h2>
                     </div>
                     {/*display list of answers to the current question*/}
                     <div className="answer-section">
@@ -145,23 +147,27 @@ function Quiz({ quizArray }) {
                                         .replace(/&quot;/g, '"')
                                         .replace(/;&#039;/g, "'")
                                         .replace(/&#039;/g, "'")
-                                        .replace(/&rsquo;/g, "'")}
+                                        .replace(/&rsquo;/g, "'")
+                                        .replace(/&amp;/g, "&")
+                                        .replace(/&ouml;/g, "ö")}
                                 </button>
                             ))}
                         </div>
                     </div>
                     {/*display question number out of 10*/}
-                    <div className="question-count-container">
-                        <div className="question-count">
-                            <h2>
-                                {currentQuestion + 1}/{quizArray.length}
-                            </h2>
+                    <div className="quiz-bottom">
+                        <div className="question-count-container">
+                            <div className="question-count">
+                                <h2>
+                                    {currentQuestion + 1}/{quizArray.length}
+                                </h2>
+                            </div>
                         </div>
-                    </div>
-                    <div className="quit-btn-container">
-                        <Link className="quit-btn" to="/InputSelect">
-                            <button className="quit-game-btn">Quit</button>
-                        </Link>
+                        <div className="quit-btn-container">
+                            <Link className="quit-btn" to="/InputSelect">
+                                <button className="quit-game-btn">Quit</button>
+                            </Link>
+                        </div>
                     </div>
                 </>
             )}
