@@ -153,43 +153,24 @@ function Quiz({ quizArray }) {
                 </>
             ) : (
                 <>
-                    {/*display current question*/}
-                    <div className="question-section">
-                        <h2 className="question-text">
-                            {quizArray[currentQuestion].question
-                                .replace(/&quot;/g, '"')
-                                .replace(/;&#039;/g, "'")
-                                .replace(/&#039;/g, "'")
-                                .replace(/&rsquo;/g, "'")
-                                .replace(/&amp;/g, "&")
-                                .replace(/&ouml;/g, "ö")}
-                        </h2>
-                    </div>
-                    {/*display list of answers to the current question*/}
-                    <div className="answer-section">
-                        <div className="answers-flex">
-                            {joker
-                                ? jokerAnswers.map((answerOption) => (
-                                      <button
-                                          className="questionbtn"
-                                          onClick={() =>
-                                              handleAnswerOptionClick(
-                                                  answerOption.isCorrect
-                                              )
-                                          }
-                                      >
-                                          {answerOption.answerText
-                                              .replace(/&quot;/g, '"')
-                                              .replace(/;&#039;/g, "'")
-                                              .replace(/&#039;/g, "'")
-                                              .replace(/&rsquo;/g, "'")
-                                              .replace(/&amp;/g, "&")
-                                              .replace(/&ouml;/g, "ö")}
-                                      </button>
-                                  ))
-                                : /*List of answers*/
-                                  answers[currentQuestion].map(
-                                      (answerOption) => (
+                    <div className="quiz">
+                        {/*display current question*/}
+                        <div className="question-section">
+                            <h2 className="question-text">
+                                {quizArray[currentQuestion].question
+                                    .replace(/&quot;/g, '"')
+                                    .replace(/;&#039;/g, "'")
+                                    .replace(/&#039;/g, "'")
+                                    .replace(/&rsquo;/g, "'")
+                                    .replace(/&amp;/g, "&")
+                                    .replace(/&ouml;/g, "ö")}
+                            </h2>
+                        </div>
+                        {/*display list of answers to the current question*/}
+                        <div className="answer-section">
+                            <div className="answers-flex">
+                                {joker
+                                    ? jokerAnswers.map((answerOption) => (
                                           <button
                                               className="questionbtn"
                                               onClick={() =>
@@ -202,37 +183,70 @@ function Quiz({ quizArray }) {
                                                   .replace(/&quot;/g, '"')
                                                   .replace(/;&#039;/g, "'")
                                                   .replace(/&#039;/g, "'")
-                                                  .replace(/&rsquo;/g, "'")}
+                                                  .replace(/&rsquo;/g, "'")
+                                                  .replace(/&amp;/g, "&")
+                                                  .replace(/&ouml;/g, "ö")}
                                           </button>
-                                      )
-                                  )}
+                                      ))
+                                    : /*List of answers*/
+                                      answers[currentQuestion].map(
+                                          (answerOption) => (
+                                              <button
+                                                  className="questionbtn"
+                                                  onClick={() =>
+                                                      handleAnswerOptionClick(
+                                                          answerOption.isCorrect
+                                                      )
+                                                  }
+                                              >
+                                                  {answerOption.answerText
+                                                      .replace(/&quot;/g, '"')
+                                                      .replace(/;&#039;/g, "'")
+                                                      .replace(/&#039;/g, "'")
+                                                      .replace(/&rsquo;/g, "'")}
+                                              </button>
+                                          )
+                                      )}
+                            </div>
                         </div>
-                    </div>
 
-                    {/*display question number out of 10*/}
-                    <div className="quiz-bottom">
-                        <div className="question-count-container">
-                            <div className="question-count">
-                                <h2>
-                                    {currentQuestion + 1}/{quizArray.length}
-                                </h2>
+                        <div className="quiz-bottom">
+                            <div className="quiz-bottom-left">
+                                {/*display timer*/}
+                                <div className="timer-container">
+                                    <Timer key={currentQuestion} />
+                                </div>
                             </div>
-                            <div className={jokerCard}>
-                                <img
-                                    src={jokerPic}
-                                    alt="Joker"
-                                    width="100%"
-                                    onClick={() => fiftyJoker()}
-                                ></img>
+                            <div className="quiz-bottom-center">
+                                {/*display question number out of 10*/}
+                                <div className="question-count">
+                                    <h2>
+                                        {currentQuestion + 1}/{quizArray.length}
+                                    </h2>
+                                </div>
+                                {/*display quit button*/}
+                                <div className="quit-btn-container">
+                                    <Link
+                                        className="quit-btn"
+                                        to="/InputSelect"
+                                    >
+                                        <button className="quit-game-btn">
+                                            Quit
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                        <div className="quit-btn-container">
-                            <Link className="quit-btn" to="/InputSelect">
-                                <button className="quit-game-btn">Quit</button>
-                            </Link>
-                        </div>
-                        <div className="timer-container">
-                            <Timer key={currentQuestion} />
+                            <div className="quiz-bottom-right">
+                                {/*display Joker Card*/}
+                                <div className={jokerCard}>
+                                    <img
+                                        src={jokerPic}
+                                        alt="Joker"
+                                        width="100%"
+                                        onClick={() => fiftyJoker()}
+                                    ></img>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </>
