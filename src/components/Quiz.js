@@ -9,7 +9,6 @@ function Quiz({ quizArray }) {
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState([]);
 
-  console.log(score);
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
   for (let i = 0; i < quizArray.length; i++) {
@@ -44,13 +43,20 @@ function Quiz({ quizArray }) {
       let randomNr1 = Math.floor(Math.random() * 4);
       console.log(randomNr1);
       console.log(answers[0]);
+      let count = 0;
       const jokerAnswers = answers[0].map((answer, index) => {
-        if (answer.isCorrect !== true) {
-          console.log("false answer");
+        if (answer.isCorrect === true) {
+          return answer;
+        } else if (answer.isCorrect !== true && count < 1) {
+          count++;
+          return answer;
+        } else {
+          return null;
         }
       });
 
-      console.log(jokerAnswers);
+      setAnswers(jokerAnswers);
+      console.log(answers);
     }
   };
 
