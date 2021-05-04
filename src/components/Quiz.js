@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTransition, animated } from "react-spring";
 import jokerPic from "./joker-card.png";
+import Timer from "./Timer";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -195,6 +196,8 @@ function Quiz({ quizArray }) {
                 {currentQuestion + 1}/{quizArray.length}
               </h2>
             </div>
+            <div>
+            </div>
             <div className={jokerCard}>
               <img
                 src={jokerPic}
@@ -202,6 +205,9 @@ function Quiz({ quizArray }) {
                 width="100%"
                 onClick={() => fiftyJoker()}
               ></img>
+            </div>
+            <div className="timer-container">
+            <Timer className="timer" key={currentQuestion} />
             </div>
           </div>
         </>
