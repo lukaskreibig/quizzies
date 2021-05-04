@@ -33,6 +33,7 @@ function Quiz({ quizArray }) {
       setScore(score + 1);
     }
     const nextQuestion = currentQuestion + 1;
+    setJoker(false);
     if (nextQuestion < quizArray.length) {
       setCurrentQuestion(nextQuestion);
     } else {
@@ -43,18 +44,20 @@ function Quiz({ quizArray }) {
   const fiftyJoker = () => {
     if (answers[currentQuestion].length > 2) {
       let count = 0;
-      const jokerAnswers = answers[currentQuestion].map((answer, index) => {
+      const jokerMap = answers[currentQuestion].map((answer, index) => {
         if (answer.isCorrect === true) {
           return answer;
         } else if (answer.isCorrect !== true && count < 1) {
           count++;
           return answer;
-        } else {
-          return null;
         }
       });
 
-      setJokerAnswers(jokerAnswers);
+      setJokerAnswers(
+        jokerMap.filter((jokerAnswer) => jokerAnswer !== undefined)
+      );
+      console.log(jokerAnswers);
+      setJoker(true);
     }
   };
 
@@ -143,27 +146,36 @@ function Quiz({ quizArray }) {
           {/*display list of answers to the current question*/}
           <div className="answer-section">
             <div className="answers-flex">
-              {/*List of answers*/}
-              {answers[currentQuestion].map((answerOption) => (
-                <button
-                  className="questionbtn"
-                  onClick={() =>
-                    handleAnswerOptionClick(answerOption.isCorrect)
-                  }
-                >
-                  {joker
-                    ? jokerAnswers.answerText
-                        .replace(/&quot;/g, '"')
-                        .replace(/;&#039;/g, "'")
-                        .replace(/&#039;/g, "'")
-                        .replace(/&rsquo;/g, "'")
-                    : answerOption.answerText
+              {joker
+                ? jokerAnswers.map((answerOption) => (
+                    <button
+                      className="questionbtn"
+                      onClick={() =>
+                        handleAnswerOptionClick(answerOption.isCorrect)
+                      }
+                    >
+                      {answerOption.answerText
                         .replace(/&quot;/g, '"')
                         .replace(/;&#039;/g, "'")
                         .replace(/&#039;/g, "'")
                         .replace(/&rsquo;/g, "'")}
-                </button>
-              ))}
+                    </button>
+                  ))
+                : /*List of answers*/
+                  answers[currentQuestion].map((answerOption) => (
+                    <button
+                      className="questionbtn"
+                      onClick={() =>
+                        handleAnswerOptionClick(answerOption.isCorrect)
+                      }
+                    >
+                      {answerOption.answerText
+                        .replace(/&quot;/g, '"')
+                        .replace(/;&#039;/g, "'")
+                        .replace(/&#039;/g, "'")
+                        .replace(/&rsquo;/g, "'")}
+                    </button>
+                  ))}
             </div>
           </div>
           {/*display question number out of 10*/}
