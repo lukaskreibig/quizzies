@@ -375,6 +375,19 @@ h1:link {
     box-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.794);
 }
 
+.timesup {
+    font-size: 19px;
+    background-color: #810606;
+    color: #e1af4f;
+    box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+    border: 2px solid #e1af4f;
+    border-radius: 6px;
+    margin: 10px;
+    width: 500px;
+    height: 70px;
+    transition: 0.5s;
+}
+
 .questionbtn {
     font-size: 19px;
     background-color: #1a6340;

@@ -14,6 +14,7 @@ function Quiz({ quizArray }) {
     const [joker, setJoker] = useState(false);
     const [jokerUsed, setJokerUsed] = useState(false);
     const [jokerCard, setJokerCard] = useState("joker");
+    const [answerClass, setAnswerClass] = useState("questionbtn");
 
     //iterates through all the answers, randomizes them and puts them in the state "answers"
 
@@ -44,6 +45,20 @@ function Quiz({ quizArray }) {
         } else {
             setShowScore(true);
         }
+    };
+
+    const timesUp = () => {
+        setAnswerClass("timesup");
+        setTimeout(() => {
+            setAnswerClass("questionbtn");
+            const nextQuestion = currentQuestion + 1;
+            setJoker(false);
+            if (nextQuestion < quizArray.length) {
+                setCurrentQuestion(nextQuestion);
+            } else {
+                setShowScore(true);
+            }
+        }, 1000);
     };
 
     const fiftyJoker = () => {
@@ -214,7 +229,10 @@ function Quiz({ quizArray }) {
                             <div className="quiz-bottom-left">
                                 {/*display timer*/}
                                 <div className="timer-container">
-                                    <Timer key={currentQuestion} />
+                                    <Timer
+                                        key={currentQuestion}
+                                        timesUp={timesUp}
+                                    />
                                 </div>
                             </div>
                             <div className="quiz-bottom-center">
