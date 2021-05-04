@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+//import { useTransition, animated } from "react-spring";
+import jokerPic from "./joker-card.png";
 
 function Quiz({ quizArray }) {
     //Set status to current question
@@ -7,16 +9,21 @@ function Quiz({ quizArray }) {
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
     const [answers, setAnswers] = useState([]);
+    const [jokerAnswers, setJokerAnswers] = useState(null);
+    const [joker, setJoker] = useState(false);
+    const [jokerUsed, setJokerUsed] = useState(false);
+    const [jokerCard, setJokerCard] = useState("joker");
 
-    console.log(score);
     //iterates through all the answers, randomizes them and puts them in the state "answers"
+
     for (let i = 0; i < quizArray.length; i++) {
         answers.push(
             [quizArray[i].correct_answer, ...quizArray[i].incorrect_answers]
                 .map((a) => ({ sort: Math.random(), value: a }))
                 .sort((a, b) => a.sort - b.sort)
                 .map((a) => a.value)
-                .map((answer) => ({
+                .map((answer, index) => ({
+                    id: index,
                     answerText: answer,
                     isCorrect:
                         answer === quizArray[i].correct_answer ? true : false,
@@ -30,10 +37,37 @@ function Quiz({ quizArray }) {
             setScore(score + 1);
         }
         const nextQuestion = currentQuestion + 1;
+        setJoker(false);
         if (nextQuestion < quizArray.length) {
             setCurrentQuestion(nextQuestion);
         } else {
             setShowScore(true);
+        }
+    };
+
+    const fiftyJoker = () => {
+        if (!jokerUsed) {
+            if (answers[currentQuestion].length > 2) {
+                let count = 0;
+                const jokerMap = answers[currentQuestion].map(
+                    (answer, index) => {
+                        if (answer.isCorrect === true) {
+                            return answer;
+                        } else if (answer.isCorrect !== true && count < 1) {
+                            count++;
+                            return answer;
+                        }
+                    }
+                );
+                setJokerAnswers(
+                    jokerMap.filter((jokerAnswer) => jokerAnswer !== undefined)
+                );
+                console.log(jokerAnswers);
+                setJoker(true);
+                setJokerUsed(true);
+                setJokerCard("jokerused");
+            }
+        } else {
         }
     };
 
@@ -133,27 +167,47 @@ function Quiz({ quizArray }) {
                     {/*display list of answers to the current question*/}
                     <div className="answer-section">
                         <div className="answers-flex">
-                            {/*List of answers*/}
-                            {answers[currentQuestion].map((answerOption) => (
-                                <button
-                                    className="questionbtn"
-                                    onClick={() =>
-                                        handleAnswerOptionClick(
-                                            answerOption.isCorrect
-                                        )
-                                    }
-                                >
-                                    {answerOption.answerText
-                                        .replace(/&quot;/g, '"')
-                                        .replace(/;&#039;/g, "'")
-                                        .replace(/&#039;/g, "'")
-                                        .replace(/&rsquo;/g, "'")
-                                        .replace(/&amp;/g, "&")
-                                        .replace(/&ouml;/g, "ö")}
-                                </button>
-                            ))}
+                            {joker
+                                ? jokerAnswers.map((answerOption) => (
+                                      <button
+                                          className="questionbtn"
+                                          onClick={() =>
+                                              handleAnswerOptionClick(
+                                                  answerOption.isCorrect
+                                              )
+                                          }
+                                      >
+                                          {answerOption.answerText
+                                              .replace(/&quot;/g, '"')
+                                              .replace(/;&#039;/g, "'")
+                                              .replace(/&#039;/g, "'")
+                                              .replace(/&rsquo;/g, "'")
+                                              .replace(/&amp;/g, "&")
+                                              .replace(/&ouml;/g, "ö")}
+                                      </button>
+                                  ))
+                                : /*List of answers*/
+                                  answers[currentQuestion].map(
+                                      (answerOption) => (
+                                          <button
+                                              className="questionbtn"
+                                              onClick={() =>
+                                                  handleAnswerOptionClick(
+                                                      answerOption.isCorrect
+                                                  )
+                                              }
+                                          >
+                                              {answerOption.answerText
+                                                  .replace(/&quot;/g, '"')
+                                                  .replace(/;&#039;/g, "'")
+                                                  .replace(/&#039;/g, "'")
+                                                  .replace(/&rsquo;/g, "'")}
+                                          </button>
+                                      )
+                                  )}
                         </div>
                     </div>
+
                     {/*display question number out of 10*/}
                     <div className="quiz-bottom">
                         <div className="question-count-container">
@@ -161,6 +215,14 @@ function Quiz({ quizArray }) {
                                 <h2>
                                     {currentQuestion + 1}/{quizArray.length}
                                 </h2>
+                            </div>
+                            <div className={jokerCard}>
+                                <img
+                                    src={jokerPic}
+                                    alt="Joker"
+                                    width="100%"
+                                    onClick={() => fiftyJoker()}
+                                ></img>
                             </div>
                         </div>
                         <div className="quit-btn-container">
