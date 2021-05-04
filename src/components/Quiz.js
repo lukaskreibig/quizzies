@@ -31,7 +31,6 @@ function Quiz({ quizArray }) {
     if (isCorrect) {
       setScore(score + 1);
       setCorrectAnswer(answerNr);
-
       // setAnswerClass("questioncorrect");
       // setTimeout(function () {
       //   setAnswerClass("questionbtn");
