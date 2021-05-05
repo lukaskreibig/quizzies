@@ -945,34 +945,41 @@ h3 {
 /* Media Query for Desktop Devices */
 
 @media (min-width: 768px) {
-    .intro-text-mobile {
-        display: none;
-    }
-    .col-sm {
-        margin: 5px 0px;
-    }
-    #line-one-footer {
-        margin-bottom: 0;
-    }
-    .quiz-bottom {
-        width: 900px;
-        margin: 15px;
-        margin-top: 30px;
-    }
-    .quiz {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        height: 70vh;
-    }
-    .answers-flex {
-        min-height: 180px;
-    }
-    .after-quiz {
-        width: 60%;
-    }
-    .emdbtn:hover {
-        background-color: #e1af4f;
-    }
+  .questionbtn:active {
+    background-color: +#0b2b1b;
+    box-shadow: 2px 2px 2px black;
+    transform: translateY(4px);
+  }
+
+  .questionbtn:hover {
+    background-color: #e1af4f;
+    color: #1a6340;
+  }
+  .intro-text-mobile {
+    display: none;
+  }
+  .col-sm {
+    margin: 5px 0px;
+  }
+  #line-one-footer {
+    margin-bottom: 0;
+  }
+  .quiz-bottom {
+    width: 900px;
+    margin: 15px;
+    margin-top: 30px;
+  }
+  .quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
+  }
+  .answers-flex {
+    min-height: 180px;
+  }
+  .after-quiz {
+    width: 60%;
+  }
 }
