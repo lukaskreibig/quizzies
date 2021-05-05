@@ -15,6 +15,7 @@ function Quiz({ quizArray }) {
   const [jokerUsed, setJokerUsed] = useState(false);
   const [jokerCard, setJokerCard] = useState("joker");
   const [answerClass, setAnswerClass] = useState("questionbtn");
+  const [changeColor, setChangeColor] = useState(false);
 
   //iterates through all the answers, randomizes them and puts them in the state "answers"
 
@@ -37,13 +38,19 @@ function Quiz({ quizArray }) {
     if (isCorrect) {
       setScore(score + 1);
     }
-    const nextQuestion = currentQuestion + 1;
-    setJoker(false);
-    if (nextQuestion < quizArray.length) {
-      setCurrentQuestion(nextQuestion);
-    } else {
-      setShowScore(true);
-    }
+    setChangeColor(true);
+    console.log(changeColor);
+    setTimeout(() => {
+      const nextQuestion = currentQuestion + 1;
+      setJoker(false);
+      if (nextQuestion < quizArray.length) {
+        setCurrentQuestion(nextQuestion);
+        setChangeColor(false);
+        console.log(changeColor);
+      } else {
+        setShowScore(true);
+      }
+    }, 1500);
   };
 
   const timesUp = () => {
@@ -57,7 +64,7 @@ function Quiz({ quizArray }) {
       } else {
         setShowScore(true);
       }
-    }, 1000);
+    }, 1500);
   };
 
   const fiftyJoker = () => {
@@ -175,37 +182,55 @@ function Quiz({ quizArray }) {
             <div className="answer-section">
               <div className="answers-flex">
                 {joker
-                  ? jokerAnswers.map((answerOption) => (
-                      <button
-                        className={answerClass}
-                        onClick={() =>
-                          handleAnswerOptionClick(answerOption.isCorrect)
-                        }
-                      >
-                        {answerOption.answerText
-                          .replace(/&quot;/g, '"')
-                          .replace(/;&#039;/g, "'")
-                          .replace(/&#039;/g, "'")
-                          .replace(/&rsquo;/g, "'")
-                          .replace(/&amp;/g, "&")
-                          .replace(/&ouml;/g, "ö")}
-                      </button>
-                    ))
+                  ? jokerAnswers.map((answerOption) => {
+                      const color = changeColor
+                        ? answerOption.isCorrect
+                          ? "green"
+                          : "red"
+                        : "";
+
+                      return (
+                        <button
+                          className={answerClass}
+                          id={color}
+                          onClick={() =>
+                            handleAnswerOptionClick(answerOption.isCorrect)
+                          }
+                        >
+                          {answerOption.answerText
+                            .replace(/&quot;/g, '"')
+                            .replace(/;&#039;/g, "'")
+                            .replace(/&#039;/g, "'")
+                            .replace(/&rsquo;/g, "'")
+                            .replace(/&amp;/g, "&")
+                            .replace(/&ouml;/g, "ö")}
+                        </button>
+                      );
+                    })
                   : /*List of answers*/
-                    answers[currentQuestion].map((answerOption) => (
-                      <button
-                        className={answerClass}
-                        onClick={() =>
-                          handleAnswerOptionClick(answerOption.isCorrect)
-                        }
-                      >
-                        {answerOption.answerText
-                          .replace(/&quot;/g, '"')
-                          .replace(/;&#039;/g, "'")
-                          .replace(/&#039;/g, "'")
-                          .replace(/&rsquo;/g, "'")}
-                      </button>
-                    ))}
+                    answers[currentQuestion].map((answerOption) => {
+                      const color = changeColor
+                        ? answerOption.isCorrect
+                          ? "green"
+                          : "red"
+                        : "";
+
+                      return (
+                        <button
+                          className={answerClass}
+                          id={color}
+                          onClick={() =>
+                            handleAnswerOptionClick(answerOption.isCorrect)
+                          }
+                        >
+                          {answerOption.answerText
+                            .replace(/&quot;/g, '"')
+                            .replace(/;&#039;/g, "'")
+                            .replace(/&#039;/g, "'")
+                            .replace(/&rsquo;/g, "'")}
+                        </button>
+                      );
+                    })}
               </div>
             </div>
 
