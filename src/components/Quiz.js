@@ -238,7 +238,10 @@ function Quiz({ quizArray }) {
               <div className="quiz-bottom-left">
                 {/*display timer*/}
                 <div className="timer-container">
-                  <Timer key={currentQuestion} timesUp={timesUp} />
+                  <Timer
+                    key={currentQuestion}
+                    handleAnswerOptionClick={handleAnswerOptionClick}
+                  />
                 </div>
               </div>
               <div className="quiz-bottom-center">

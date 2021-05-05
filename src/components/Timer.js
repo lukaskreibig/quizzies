@@ -1,6 +1,6 @@
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
-const Timer = ({ key, timesUp }) => (
+const Timer = ({ key, handleAnswerOptionClick }) => (
   <CountdownCircleTimer
     key={key}
     isPlaying
@@ -10,7 +10,7 @@ const Timer = ({ key, timesUp }) => (
       ["#FFFF00", 0.33],
       ["#ff3232", 0.33],
     ]}
-    onComplete={() => timesUp()}
+    onComplete={() => handleAnswerOptionClick()}
     size={80}
   >
     {({ remainingTime }) => remainingTime}
