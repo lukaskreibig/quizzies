@@ -53,20 +53,6 @@ function Quiz({ quizArray }) {
     }, 1500);
   };
 
-  const timesUp = () => {
-    setAnswerClass("timesup");
-    setTimeout(() => {
-      setAnswerClass("questionbtn");
-      const nextQuestion = currentQuestion + 1;
-      setJoker(false);
-      if (nextQuestion < quizArray.length) {
-        setCurrentQuestion(nextQuestion);
-      } else {
-        setShowScore(true);
-      }
-    }, 1500);
-  };
-
   const fiftyJoker = () => {
     if (!jokerUsed) {
       if (answers[currentQuestion].length > 2) {
