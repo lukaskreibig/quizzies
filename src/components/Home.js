@@ -29,10 +29,11 @@ function Home() {
                     </Typography>
                 </ReadMore>
             </div>
-
-            <Link to="/inputselect">
-                <StartBtn />
-            </Link>
+            <div className="start-container">
+                <Link to="/inputselect">
+                    <StartBtn />
+                </Link>
+            </div>
         </div>
     );
 }
