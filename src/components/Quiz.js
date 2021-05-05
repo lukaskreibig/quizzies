@@ -9,7 +9,7 @@ function Quiz({ quizArray }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
-  let answers = [];
+  const [answers] = useState([]);
   const [jokerAnswers, setJokerAnswers] = useState(null);
   const [joker, setJoker] = useState(false);
   const [jokerUsed, setJokerUsed] = useState(false);

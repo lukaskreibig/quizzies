@@ -365,6 +365,12 @@ h1 {
   transform: translateY(-2px);
 }
 
+.emdbtn:focus {
+  background-color: #e1af4f;
+  color: #1a6340;
+  transform: translateY(-2px);
+}
+
 .quit-btn-container {
   display: flex;
   justify-content: center;
@@ -380,6 +386,12 @@ h1 {
   width: 60px;
   height: 30px;
   cursor: pointer;
+}
+
+.quit-game-btn:hover {
+  background-color: #d27e4e;
+  color: #1a6340;
+  transition: 0.3s;
 }
 
 /* styling of Quiz Component */
@@ -555,6 +567,11 @@ h3 {
 .playbtnsmall {
   position: absolute;
   width: 70px;
+}
+
+.playbtnsmall:hover {
+  transform: translateX(6.2px);
+  transition: 0.5s;
 }
 
 .startbtnsmall {
@@ -915,6 +932,7 @@ h3 {
     height: 40px;
     width: 40px;
   }
+
   .feedback-btn {
     height: 35px;
     width: 82px;
