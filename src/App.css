@@ -28,14 +28,14 @@ p {
 
 .menu {
     background-color: #e1af4f;
-    padding: 2px;
+    padding: 1px;
     text-align: right;
     position: relative;
     overflow: hidden;
 }
 
 .menu a {
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
     color: #0d482c;
     font-weight: bold;
@@ -44,6 +44,15 @@ p {
 
 a:hover {
     color: #d27e4e;
+}
+
+.nav-center {
+    display: inline-block;
+}
+.title-nav {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 #nav-line {
@@ -269,14 +278,19 @@ h1:hover {
 /* styling of InputSelect */
 
 .Input {
-    margin-top: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70vh;
 }
 
 .Topic {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -284,8 +298,8 @@ h1:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -293,8 +307,13 @@ h1 {
     text-shadow: 4px 4px 6px black;
 }
 
-h1:link {
-    text-decoration: none;
+.start-img {
+    max-width: 150px;
+    transition: transform 250ms;
+}
+
+.start-img:hover {
+    transform: translateY(-4px);
 }
 
 .start-quiz {
@@ -316,6 +335,7 @@ h1:link {
     margin: 10px;
     width: 110px;
     height: 38px;
+    transition: 0.3s;
 }
 
 .emdbtn:active {
@@ -324,6 +344,11 @@ h1:link {
 }
 
 .emdbtn:focus {
+    background-color: #e1af4f;
+    color: #1a6340;
+}
+
+.emdbtn:hover {
     background-color: #e1af4f;
     color: #1a6340;
 }
