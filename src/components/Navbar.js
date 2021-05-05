@@ -12,7 +12,6 @@ const Navbar = () => {
                         alt="logo-home"
                     />
                 </NavLink>
-                <h1 className="title-nav">Trivia Night</h1>
                 <div>
                     <NavLink
                         activeClassName="active_class"

@@ -437,6 +437,14 @@ h1 {
     color: #1a6340;
 }
 
+#red {
+    background-color: #c00e0e;
+}
+
+#green {
+    background-color: #2b9c66;
+}
+
 .answer-section {
     display: flex;
     justify-content: center;
