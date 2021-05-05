@@ -7,6 +7,9 @@ body {
   font-family: "Lato", sans-serif;
   color: #e1af4f;
   height: 96.3vh;
+  background-image: url("/src/background-image.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -386,6 +389,7 @@ h1 {
   box-shadow: 2px 2px 4px black;
   border-radius: 10px;
   transition: 0.3s;
+  background-color: #1a6340;
 }
 
 .joker:active {
