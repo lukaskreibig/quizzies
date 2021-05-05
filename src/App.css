@@ -483,8 +483,8 @@ h1 {
 }
 h3 {
     color: #d27e4e;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .result-body {
@@ -492,7 +492,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding-top: 50px;
+    padding-top: 30px;
     height: 60vh;
 }
 
@@ -506,10 +506,10 @@ h3 {
 }
 
 .after-quiz {
-    width: 60%;
     display: flex;
     justify-content: space-around;
-    margin: 10px;
+    margin-top: 25px;
+    margin-bottom: 0;
 }
 
 .pink-star {
@@ -762,9 +762,7 @@ h3 {
     .quiz-bottom {
         margin: 15px;
     }
-    h3 {
-        margin-top: 0;
-    }
+
     .final-score {
         margin-top: 0;
     }
@@ -772,7 +770,8 @@ h3 {
         padding: 0;
     }
     .after-quiz {
-        margin-top: 10px;
+        width: 90%;
+        margin-top: 25px;
     }
     .after-quiz-options h2 {
         font-size: 15px;
@@ -855,9 +854,7 @@ h3 {
     .quiz-bottom {
         margin: 5px;
     }
-    h3 {
-        margin-top: 0;
-    }
+
     .final-score {
         margin-top: 0;
     }
@@ -865,6 +862,7 @@ h3 {
         padding: 0;
     }
     .after-quiz {
+        width: 96%;
         margin-top: 20px;
     }
     .after-quiz-options h2 {
@@ -946,5 +944,8 @@ h3 {
     }
     .answers-flex {
         min-height: 180px;
+    }
+    .after-quiz {
+        width: 60%;
     }
 }
