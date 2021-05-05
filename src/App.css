@@ -7,6 +7,10 @@ body {
   font-family: "Lato", sans-serif;
   color: #e1af4f;
   height: 96.3vh;
+  background-image: url("/src/background-image.jpg");
+  background-size: cover;
+  background-position: center;
+
 }
 
 h1 {
@@ -352,11 +356,13 @@ h1 {
 .emdbtn:focus {
   background-color: #e1af4f;
   color: #1a6340;
+  transform: translateY(-2px);
 }
 
 .emdbtn:hover {
   background-color: #e1af4f;
   color: #1a6340;
+  transform: translateY(-2px);
 }
 
 .quit-btn-container {
@@ -384,6 +390,7 @@ h1 {
   box-shadow: 2px 2px 4px black;
   border-radius: 10px;
   transition: 0.3s;
+  background-color: #1a6340;
 }
 
 .joker:active {
@@ -417,6 +424,18 @@ h1 {
   width: 500px;
   height: 70px;
   transition: 0.3s;
+
+}
+
+.questionbtn:active {
+  background-color: +#0b2b1b;
+  box-shadow: 2px 2px 2px black;
+  transform: translateY(4px);
+}
+
+.questionbtn:hover {
+  background-color: #e1af4f;
+  color: #1a6340;
 }
 
 #red {
@@ -605,6 +624,11 @@ h3 {
 .playbtn {
   display: block;
   margin: 0 auto;
+}
+
+.playbtn:hover {
+  transform: translateX(12.2px);
+  transition: 0.5s;
 }
 
 .img-container {
