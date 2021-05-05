@@ -1,4 +1,11 @@
 /* styling of Quiz Component */
+#red {
+  color: red;
+}
+
+#green {
+  color: green;
+}
 
 .questionbtn {
   font-size: 19px;
