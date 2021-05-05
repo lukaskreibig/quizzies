@@ -10,6 +10,7 @@ body {
   background-image: url("/src/background-image.jpg");
   background-size: cover;
   background-position: center;
+
 }
 
 h1 {
@@ -423,6 +424,7 @@ h1 {
   width: 500px;
   height: 70px;
   transition: 0.3s;
+
 }
 
 .questionbtn:active {
@@ -932,6 +934,16 @@ h3 {
 /* Media Query for Desktop Devices */
 
 @media (min-width: 768px) {
+  .questionbtn:active {
+    background-color: +#0b2b1b;
+    box-shadow: 2px 2px 2px black;
+    transform: translateY(4px);
+  }
+
+  .questionbtn:hover {
+    background-color: #e1af4f;
+    color: #1a6340;
+  }
   .intro-text-mobile {
     display: none;
   }
