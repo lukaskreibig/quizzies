@@ -359,17 +359,6 @@ h1 {
   transition: 0.3s;
 }
 
-.emdbtn:active {
-  background-color: #0b2b1b;
-  box-shadow: 2px 2px 2px black;
-}
-
-.emdbtn:focus {
-  background-color: #e1af4f;
-  color: #1a6340;
-  transform: translateY(-2px);
-}
-
 .emdbtn:hover {
   background-color: #e1af4f;
   color: #1a6340;
@@ -435,17 +424,6 @@ h1 {
   width: 500px;
   height: 70px;
   transition: 0.3s;
-}
-
-.questionbtn:active {
-  background-color: +#0b2b1b;
-  box-shadow: 2px 2px 2px black;
-  transform: translateY(4px);
-}
-
-.questionbtn:hover {
-  background-color: #e1af4f;
-  color: #1a6340;
 }
 
 #red {
@@ -1020,7 +998,7 @@ h3 {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .quit-game-btn {
     width: 150px;
     height: 70px;
@@ -1051,7 +1029,47 @@ h3 {
     width: 130px;
     height: 178px;
   }
+  .jokerused {
+    width: 130px;
+    height: 178px;
+  }
+
   .quiz {
     height: 80vh;
+  }
+
+  .result-body {
+    padding-top: 90px;
+    height: 75vh;
+    justify-content: space-evenly;
+  }
+
+  .after-quiz {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 150px;
+    padding-bottom: 3%;
+  }
+  .playbtnsmall {
+    position: absolute;
+    width: 100px;
+  }
+
+  .startbtnsmall {
+    position: absolute;
+    width: 100px;
+  }
+
+  .feedback-btn {
+    background-color: #1a6340;
+    color: #e1af4f;
+    box-shadow: 2px 2px 4px black;
+    border: 2px solid #e1af4f;
+    border-radius: 6px;
+    margin: 10px;
+    width: 100px;
+    height: 70px;
   }
 }
