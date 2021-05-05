@@ -5,6 +5,7 @@ const Timer = ({ key, handleAnswerOptionClick }) => (
     key={key}
     isPlaying
     duration={15}
+    backgroundColor={"#1a6340"}
     colors={[
       ["#1a6340", 0.33],
       ["#FFFF00", 0.33],
