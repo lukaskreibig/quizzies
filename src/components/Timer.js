@@ -8,7 +8,7 @@ const Timer = ({ key, timesUp }) => (
     colors={[
       ["#1a6340", 0.33],
       ["#FFFF00", 0.33],
-      ["#ff0000", 0.33],
+      ["#ff3232", 0.33],
     ]}
     onComplete={() => timesUp()}
     size={80}
