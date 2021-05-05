@@ -6,7 +6,8 @@ import Typography from "@material-ui/core/Typography";
 function Home() {
     return (
         <div className="Home">
-            <h1>Welcome to Trivia Night</h1>
+            <h1 className="maintitle-desktop">Welcome to the Game!</h1>
+            <h1 className="maintitle-mobile">Welcome to Trivia Night</h1>
             <div className="intro-text">
                 <p id="intro">
                     Trivia Night is a quiz game full of surprises! <br></br>

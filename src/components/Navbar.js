@@ -5,14 +5,19 @@ const Navbar = () => {
     return (
         <div>
             <div className="menu">
-                <NavLink className="link-btn-nav" to="/">
-                    <img
-                        className="logo-nav"
-                        src="https://i.ibb.co/cLQ05RM/start-button.png"
-                        alt="logo-home"
-                    />
-                </NavLink>
-                <div>
+                <div className="navbar-left">
+                    <NavLink className="link-btn-nav" to="/">
+                        <img
+                            className="logo-nav"
+                            src="https://i.ibb.co/cLQ05RM/start-button.png"
+                            alt="logo-home"
+                        />
+                    </NavLink>
+                </div>
+                <div className="navbar-center">
+                    <h1 className="navbar-title">TRIVIA NIGHT</h1>
+                </div>
+                <div className="navbar-right">
                     <NavLink
                         activeClassName="active_class"
                         id="home-link"
