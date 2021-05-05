@@ -49,7 +49,11 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{
+      backgroundImage: `url("https://media.istockphoto.com/photos/poker-table-picture-id1046326882?k=6&m=1046326882&s=612x612&w=0&h=FWwERAhFegLxTvxXw2uEyDg1ua1DiV-bXImf9ENaXDg=")`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
+    }}>
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
