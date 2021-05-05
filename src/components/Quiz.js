@@ -95,6 +95,7 @@ function Quiz({ quizArray }) {
             {showScore ? (
                 <>
                     <div className="result-body">
+                        <h2>Quiz Result</h2>
                         <div className="result-structure">
                             <table>
                                 <tbody>
@@ -109,7 +110,6 @@ function Quiz({ quizArray }) {
                                             className="middle-column"
                                         >
                                             <div className="score-section">
-                                                <h2>Quiz Result</h2>
                                                 <h3>You made it to</h3>
                                                 <div className="master-level">
                                                     {master()}

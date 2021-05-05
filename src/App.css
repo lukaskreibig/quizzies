@@ -484,6 +484,7 @@ h1 {
   text-align: center;
 }
 h3 {
+<<<<<<< HEAD
   color: #d27e4e;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -496,6 +497,20 @@ h3 {
   justify-content: space-around;
   padding-top: 50px;
   height: 60vh;
+=======
+    color: #d27e4e;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.result-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 30px;
+    height: 60vh;
+>>>>>>> main
 }
 
 .result-structure {
@@ -508,10 +523,17 @@ h3 {
 }
 
 .after-quiz {
+<<<<<<< HEAD
   width: 60%;
   display: flex;
   justify-content: space-around;
   margin: 10px;
+=======
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: 0;
+>>>>>>> main
 }
 
 .pink-star {
@@ -698,6 +720,7 @@ h3 {
 /* Media Query for Mobile Devices */
 
 @media (min-width: 331px) and (max-width: 480px) {
+<<<<<<< HEAD
   h1 {
     font-size: 30px;
     margin-bottom: 0;
@@ -785,11 +808,100 @@ h3 {
     font-size: 15px;
     margin-bottom: 10px;
   }
+=======
+    h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .intro-text {
+        display: none;
+    }
+    .intro-text-mobile {
+        margin-top: 30px;
+    }
+    .Home {
+        padding-top: 0;
+    }
+    .col-sm {
+        font-size: 11px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    a.social {
+        font-size: 13px;
+    }
+    .main-footer {
+        position: absolute;
+        justify-content: center;
+        bottom: 20px;
+        width: 93%;
+    }
+    .Input {
+        margin-top: 25px;
+    }
+    .Topic {
+        margin-top: 0;
+    }
+    .Difficulty {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .diffbtn {
+        display: block;
+        text-align: center;
+    }
+    .answer-section {
+        height: 240px;
+    }
+    .question-section {
+        margin-top: 0;
+        height: 120px;
+    }
+    .answers-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .question-text {
+        font-size: 19px;
+        margin: 10px;
+    }
+    .questionbtn {
+        margin: 5px 10px;
+        height: 50px;
+    }
+    .question-count {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .quiz-bottom {
+        margin: 15px;
+    }
+
+    .final-score {
+        margin-top: 0;
+    }
+    .master-level {
+        padding: 0;
+    }
+    .after-quiz {
+        width: 90%;
+        margin-top: 25px;
+    }
+    .after-quiz-options h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+>>>>>>> main
 }
 
 /* Media Query for old and tiny phones */
 
 @media (max-width: 330px) {
+<<<<<<< HEAD
   #home-link {
     display: none;
   }
@@ -903,6 +1015,120 @@ h3 {
     width: 82px;
     margin-top: 0;
   }
+=======
+    #home-link {
+        display: none;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .intro-text {
+        display: none;
+    }
+    .intro-text-mobile {
+        margin-top: 15px;
+    }
+    .Home {
+        padding-top: 0;
+    }
+    .col-sm {
+        font-size: 9px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    a.social {
+        font-size: 12px;
+    }
+    .main-footer {
+        position: absolute;
+        justify-content: center;
+        bottom: 10px;
+        width: 92%;
+    }
+    .line-one-footer {
+        margin-bottom: 0;
+    }
+    .Input {
+        margin-top: 25px;
+    }
+    .Topic {
+        margin-top: 0;
+    }
+    .Difficulty {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .diffbtn {
+        display: block;
+        text-align: center;
+    }
+    .question-section {
+        margin-top: 0;
+        height: 130px;
+    }
+    .answers-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .question-text {
+        font-size: 20px;
+        margin: 0px 5px 0px 5px;
+    }
+    .questionbtn {
+        margin: 5px 10px;
+        height: 45px;
+    }
+    .question-count {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .quiz-bottom {
+        margin: 5px;
+    }
+
+    .final-score {
+        margin-top: 0;
+    }
+    .master-level {
+        padding: 0;
+    }
+    .after-quiz {
+        width: 96%;
+        margin-top: 20px;
+    }
+    .after-quiz-options h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    #start-btn {
+        width: 100px;
+    }
+    #play-btn {
+        width: 100px;
+    }
+    .intro-mobile {
+        font-size: 8px;
+    }
+    #result-title {
+        display: none;
+    }
+    .startbtnsmall {
+        height: 40px;
+        width: 40px;
+    }
+    .playbtnsmall {
+        height: 40px;
+        width: 40px;
+    }
+    .feedback-btn {
+        height: 35px;
+        width: 82px;
+        margin-top: 0;
+    }
+>>>>>>> main
 }
 
 /* Media Query for Tablets */
@@ -930,6 +1156,7 @@ h3 {
 /* Media Query for Desktop Devices */
 
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .intro-text-mobile {
     display: none;
   }
@@ -954,4 +1181,33 @@ h3 {
   .answers-flex {
     min-height: 180px;
   }
+=======
+    .intro-text-mobile {
+        display: none;
+    }
+    .col-sm {
+        margin: 5px 0px;
+    }
+    #line-one-footer {
+        margin-bottom: 0;
+    }
+    .quiz-bottom {
+        width: 900px;
+        margin: 15px;
+        margin-top: 30px;
+    }
+    .quiz {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 70vh;
+    }
+    .answers-flex {
+        min-height: 180px;
+    }
+    .after-quiz {
+        width: 60%;
+    }
+>>>>>>> main
 }
