@@ -30,8 +30,75 @@ h2 {
     text-align: center;
 }
 
+
+
 p {
     font-size: 2vmin;
+}
+
+/* Styling for About Us */
+
+.ourHistory {
+  margin-top: 20px;
+}
+
+.texttitle {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.text2 {
+  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.containerCards
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  
+}
+
+.cardTeam {
+
+display: flex;
+height: 450px;
+justify-content: center;
+flex-wrap: wrap;
+width: 260px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
+ 
+.avatar
+{    width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+
+.cardContent
+{ 
+   text-align: center;
+   width: 90%;
+   font-size: 12px;
+}
+
+.logosAbout
+{
+  color: #e1af4f;
+  padding-left: 10px;
+  transition: 0.3s;
 }
 
 /*Styling for Navbar */
@@ -243,7 +310,7 @@ a.instagram {
 }
 
 input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 .star {
@@ -715,106 +782,148 @@ h3 {
 /* Media Query for Mobile Devices */
 
 @media (min-width: 331px) and (max-width: 480px) {
-    #home-link {
-        display: none;
-    }
-    .navbar-center {
-        display: none;
-    }
-    .maintitle-desktop {
-        display: none;
-    }
-    h1 {
-        font-size: 30px;
-        margin-bottom: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .intro-text {
-        display: none;
-    }
-    .intro-text-mobile {
-        margin-top: 30px;
-    }
-    .Home {
-        padding-top: 0;
-    }
-    .col-sm {
-        font-size: 11px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    a.social {
-        font-size: 13px;
-    }
-    .main-footer {
-        bottom: 20px;
-        width: 93%;
-    }
-    .Input {
-        margin-top: 15px;
-    }
-    .Topic {
-        margin-top: 0;
-    }
-    .Difficulty {
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    .diffbtn {
-        display: block;
-        text-align: center;
-    }
-    .answer-section {
-        height: 240px;
-    }
-    .question-section {
-        margin-top: 0;
-        height: 120px;
-    }
-    .answers-flex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 90%;
-    }
-    .question-text {
-        font-size: 19px;
-        margin: 10px;
-    }
-    .questionbtn {
-        margin: 5px 10px;
-        height: 50px;
-    }
-    .question-count {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .quiz-bottom {
-        margin: 15px;
-    }
 
-    .final-score {
-        margin-top: 0;
-    }
-    .master-level {
-        padding: 0;
-    }
-    .after-quiz {
-        width: 90%;
-        margin-top: 25px;
-    }
-    .after-quiz-options h2 {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
-    .rating-title {
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-    .input-start h1 {
-        margin-top: 0;
-    }
+  /*Mobile About Us ---------------------------------------------------------------------*/
+
+  /* Styling for About Us */
+.body {
+  background-color: #0d482c;
+  border: thick double #e1af4f;
+  font-family: "Lato", sans-serif;
+  color: #e1af4f;
+  height: 96.3vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.containerCards
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+}
+
+.cardTeam {
+
+margin-top: 40px;
+display: flex;
+height: 450px;
+justify-content: center;
+flex-wrap: wrap;
+width: 260px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
+
+  /*About Us Ends */
+
+  #home-link {
+    display: none;
+  }
+  .navbar-center {
+    display: none;
+  }
+  .maintitle-desktop {
+    display: none;
+  }
+  h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .intro-text {
+    display: none;
+  }
+  .intro-text-mobile {
+    margin-top: 30px;
+  }
+  .Home {
+    padding-top: 0;
+  }
+  .col-sm {
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  a.social {
+    font-size: 13px;
+  }
+  .main-footer {
+    bottom: 20px;
+    width: 93%;
+  }
+  .Input {
+    margin-top: 15px;
+  }
+  .Topic {
+    margin-top: 0;
+  }
+  .Difficulty {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .diffbtn {
+    display: block;
+    text-align: center;
+  }
+  .answer-section {
+    height: 240px;
+  }
+  .question-section {
+    margin-top: 0;
+    height: 120px;
+  }
+  .answers-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  .question-text {
+    font-size: 19px;
+    margin: 10px;
+  }
+  .questionbtn {
+    margin: 5px 10px;
+    height: 50px;
+  }
+  .question-count {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .quiz-bottom {
+    margin: 15px;
+  }
+
+  .final-score {
+    margin-top: 0;
+  }
+  .master-level {
+    padding: 0;
+  }
+  .after-quiz {
+    width: 90%;
+    margin-top: 25px;
+  }
+  .after-quiz-options h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .rating-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .input-start h1 {
+    margin-top: 0;
+  }
+
+
 }
 
 /* Media Query for old and tiny phones */
