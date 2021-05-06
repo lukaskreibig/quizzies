@@ -1,5 +1,6 @@
 // import React, { useState } from "react";
 import StarRating from "./StarRating";
+import Footer from "./Footer";
 
 const Contact = () => {
   // const [status, setStatus] = useState("Submit");
@@ -80,6 +81,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      <Footer />
     </div>
   );
 };

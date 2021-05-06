@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 //import { useTransition, animated } from "react-spring";
 import jokerPic from "./joker-card.png";
 import Timer from "./Timer";
+import Footer from "./Footer";
 
 function Quiz({ quizArray }) {
   //Set status to current question
@@ -146,6 +147,7 @@ function Quiz({ quizArray }) {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         </>
       ) : (
@@ -255,6 +257,7 @@ function Quiz({ quizArray }) {
                 </div>
               </div>
             </div>
+            <Footer />
           </div>
         </>
       )}
@@ -262,7 +265,6 @@ function Quiz({ quizArray }) {
   ) : (
     <div className="App">
       <h2> ...Loading QUIZ...</h2>
-      <div></div>
     </div>
   );
 }
