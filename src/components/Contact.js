@@ -25,7 +25,7 @@ const Contact = () => {
   };
   return (
     <div className="contact-container">
-      <form onSubmit={handleSubmit}>
+      <form className="all-contact-items" onSubmit={handleSubmit}>
         <div className="star-feedback">
           <h1 className="rating-title">How did you like the game?</h1>
           <StarRating />
