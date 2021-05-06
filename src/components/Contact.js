@@ -36,26 +36,26 @@ const Contact = () => {
           <table className="table">
             <tr className="name">
               <td className="left-column">
-                <label htmlFor="name">Name:</label>
               </td>
               <td className="right-column">
                 <input
                   className="contact-input"
                   type="text"
                   id="name"
+                  placeholder="Name"
                   required
                 />
               </td>
             </tr>
             <tr className="email">
               <td className="left-column">
-                <label htmlFor="email">Email:</label>
               </td>
               <td className="right-column">
                 <input
                   className="contact-input"
                   type="email"
                   id="email"
+                  placeholder="Email"
                   required
                 />
               </td>
@@ -63,10 +63,9 @@ const Contact = () => {
 
             <tr className="message">
               <td className="left-column">
-                <label htmlFor="message">Message:</label>
               </td>
               <td className="right-column">
-                <textarea id="message" required />
+                <textarea id="message" required placeholder="Message"/>
               </td>
             </tr>
           </table>
