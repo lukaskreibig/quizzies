@@ -115,7 +115,7 @@ function Quiz({ quizArray }) {
     from: { opacity: 0 },
     to: { opacity: 1 },
     leave: { opacity: 0 },
-    delay: 3000,
+    delay: 2200,
 
     config: {
       duration: 300, // duration for the whole animation form start to end

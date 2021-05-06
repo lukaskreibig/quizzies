@@ -243,10 +243,10 @@ a.instagram {
 }
 
 .table {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .right-column {
@@ -284,15 +284,15 @@ a.instagram {
 }
 
 .submit-button {
-    cursor: pointer;
-    background-color: #1a6340;
-    color: #e1af4f;
-    box-shadow: 2px 2px 4px black;
-    border: 2px solid #e1af4f;
-    border-radius: 6px;
-    margin-top: 15px;
-    width: 100px;
-    height: 30px;
+  cursor: pointer;
+  background-color: #1a6340;
+  color: #e1af4f;
+  box-shadow: 2px 2px 4px black;
+  border: 2px solid #e1af4f;
+  border-radius: 6px;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
 }
 
 input[type="radio"] {
@@ -499,8 +499,7 @@ h1 {
 }
 
 #red {
-    background-color: #860111;
-
+  background-color: #860111;
 }
 
 #green {
@@ -875,6 +874,7 @@ h3 {
   .questionbtn {
     margin: 5px 10px;
     height: 50px;
+    width: 87vw;
   }
   .question-count {
     margin-left: 20px;
