@@ -1,0 +1,38 @@
+
+.container
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+.card {
+
+display: flex;
+height: 600px;
+justify-content: space-evenly;
+flex-wrap: wrap;
+width: 300px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
+ 
+.avatar
+{    width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+.cardContent
+{ 
+   text-align: center;
+   width: 90%;
+   font-size: 12px;
+}

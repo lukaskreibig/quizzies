@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   const [quizArray, setQuizArray] = useState([]);
@@ -66,6 +67,7 @@ function App() {
           />
           <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
           <Route path="/contact" component={Contact} />
+          <Route path="/about" component= {About}/>
         </Switch>
         <Footer />
       </div>
