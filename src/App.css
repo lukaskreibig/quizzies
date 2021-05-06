@@ -12,6 +12,13 @@ body {
   background-position: center;
 }
 
+.big-flex {
+  display: flex;
+  height: 89.4vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h1 {
   font-family: "Cinzel Decorative", cursive;
   font-size: 5.9pts;
@@ -164,9 +171,9 @@ a.instagram {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
-  height: 88vh;
+  height: 80vh;
 }
 
 .contact-form {
@@ -253,9 +260,9 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-top: 10px;
-  height: 88vh;
+  height: 80vh;
 }
 
 h1:hover {
@@ -296,8 +303,8 @@ h1:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 88vh;
+  justify-content: space-evenly;
+  height: 80vh;
 }
 
 .Topic {
@@ -392,8 +399,8 @@ h1 {
 /* styling of Quiz Component */
 
 .quiz {
-  height: 88vh;
-  justify-content: space-between;
+  height: 80vh;
+  justify-content: space-evenly;
 }
 
 .joker {
@@ -499,8 +506,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 88vh;
+  justify-content: space-around;
+  height: 80vh;
 }
 
 .result-structure {
@@ -998,7 +1005,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 88vh;
+    height: 80vh;
   }
   .answers-flex {
     min-height: 180px;
@@ -1044,13 +1051,10 @@ h3 {
     height: 178px;
   }
 
-  .quiz {
-    height: 88vh;
-  }
-
   .result-body {
-    height: 88vh;
-    justify-content: space-between;
+    padding-top: 90px;
+    height: 70vh;
+    justify-content: space-around;
   }
 
   .after-quiz {

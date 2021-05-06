@@ -50,23 +50,25 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route
-          path="/inputselect"
-          render={() => (
-            <InputSelect
-              quizArray={quizArray}
-              quizCategories={quizCategories}
-              changeTopic={changeTopic}
-              changeDifficulty={changeDifficulty}
-            />
-          )}
-        />
-        <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-      <Footer />
+      <div className="big-flex">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route
+            path="/inputselect"
+            render={() => (
+              <InputSelect
+                quizArray={quizArray}
+                quizCategories={quizCategories}
+                changeTopic={changeTopic}
+                changeDifficulty={changeDifficulty}
+              />
+            )}
+          />
+          <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
+        <Footer />
+      </div>
     </div>
   );
 }

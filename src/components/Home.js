@@ -2,7 +2,6 @@ import StartBtn from "./StartBtn";
 import { Link } from "react-router-dom";
 import ReadMore from "./ReadMore";
 import Typography from "@material-ui/core/Typography";
-import Footer from "./Footer";
 
 function Home() {
   return (
@@ -35,7 +34,6 @@ function Home() {
           <StartBtn />
         </Link>
       </div>
-      <Footer />
     </div>
   );
 }

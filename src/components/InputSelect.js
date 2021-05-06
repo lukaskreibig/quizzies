@@ -3,7 +3,6 @@ import React from "react";
 import Topic from "./Topic";
 import Difficulty from "./Difficulty";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
 
 function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
   return (
@@ -22,7 +21,6 @@ function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
           </button>
         </Link>
       </div>
-      <Footer />
     </div>
   );
 }
