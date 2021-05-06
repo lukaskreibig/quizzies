@@ -25,6 +25,7 @@
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",
     "react-spring": "^9.1.2",
+    "simple-react-carousel": "^1.3.10",
     "styled-components": "^5.2.3",
     "web-vitals": "^1.0.1"
   },
