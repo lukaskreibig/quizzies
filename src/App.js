@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Quiz from "./components/Quiz";
@@ -8,7 +7,7 @@ import InputSelect from "./components/InputSelect";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import SocialFollow from "./components/SocialFollow";
+import Footer from "./components/Footer";
 import About from "./components/About";
 
 function App() {
@@ -52,25 +51,26 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route
-          path="/inputselect"
-          render={() => (
-            <InputSelect
-              quizArray={quizArray}
-              quizCategories={quizCategories}
-              changeTopic={changeTopic}
-              changeDifficulty={changeDifficulty}
-            />
-          )}
-        />
-        <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/about" component= {About}/>
-      </Switch>
-      <Footer />
-      
+      <div className="big-flex">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route
+            path="/inputselect"
+            render={() => (
+              <InputSelect
+                quizArray={quizArray}
+                quizCategories={quizCategories}
+                changeTopic={changeTopic}
+                changeDifficulty={changeDifficulty}
+              />
+            )}
+          />
+          <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/about" component= {About}/>
+        </Switch>
+        <Footer />
+      </div>
     </div>
   );
 }
