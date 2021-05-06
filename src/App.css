@@ -12,6 +12,13 @@ body {
   background-position: center;
 }
 
+.big-flex {
+  display: flex;
+  height: 89.4vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h1 {
   font-family: "Cinzel Decorative", cursive;
   font-size: 5.9pts;
@@ -37,6 +44,7 @@ p {
   text-align: right;
   position: relative;
   overflow: hidden;
+  height: 6vh;
 }
 
 .menu a {
@@ -77,11 +85,6 @@ a:hover {
 }
 
 /* Styling for Footer */
-.main-footer {
-  position: absolute;
-  bottom: 20px;
-  width: 98%;
-}
 
 .footer-content {
   padding-top: 5px;
@@ -170,7 +173,7 @@ a.instagram {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  height: 70vh;
+  height: 80vh;
 }
 
 .contact-form {
@@ -257,10 +260,9 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 10px;
-  padding-bottom: 10px;
-  height: 70vh;
+  height: 80vh;
 }
 
 h1:hover {
@@ -301,8 +303,8 @@ h1:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 70vh;
+  justify-content: space-evenly;
+  height: 80vh;
 }
 
 .Topic {
@@ -395,6 +397,11 @@ h1 {
 }
 
 /* styling of Quiz Component */
+
+.quiz {
+  height: 80vh;
+  justify-content: space-evenly;
+}
 
 .joker {
   width: 80px;
@@ -500,8 +507,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding-top: 30px;
-  height: 60vh;
+  height: 80vh;
 }
 
 .result-structure {
@@ -570,7 +576,7 @@ h3 {
 }
 
 .playbtnsmall:hover {
-  transform: translateX(6.2px);
+  transform: translateX(4px);
   transition: 0.5s;
 }
 
@@ -742,8 +748,6 @@ h3 {
     font-size: 13px;
   }
   .main-footer {
-    position: absolute;
-    justify-content: center;
     bottom: 20px;
     width: 93%;
   }
@@ -955,11 +959,7 @@ h3 {
   .navbar-center {
     display: none;
   }
-  .main-footer {
-    position: absolute;
-    bottom: 20px;
-    width: 92%;
-  }
+
   .Home {
     padding-top: 5px;
   }
@@ -1005,8 +1005,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 70vh;
+    height: 80vh;
   }
   .answers-flex {
     min-height: 180px;
@@ -1016,10 +1015,10 @@ h3 {
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1500px) {
   .quit-game-btn {
-    width: 150px;
-    height: 70px;
+    width: 100px;
+    height: 50px;
     font-size: 20px;
   }
 
@@ -1052,14 +1051,10 @@ h3 {
     height: 178px;
   }
 
-  .quiz {
-    height: 80vh;
-  }
-
   .result-body {
     padding-top: 90px;
-    height: 75vh;
-    justify-content: space-evenly;
+    height: 70vh;
+    justify-content: space-around;
   }
 
   .after-quiz {
