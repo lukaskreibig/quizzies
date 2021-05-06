@@ -153,13 +153,7 @@ function Quiz({ quizArray }) {
             {/*display current question*/}
             <div className="question-section">
               <h2 className="question-text">
-                {quizArray[currentQuestion].question
-                  .replace(/&quot;/g, '"')
-                  .replace(/;&#039;/g, "'")
-                  .replace(/&#039;/g, "'")
-                  .replace(/&rsquo;/g, "'")
-                  .replace(/&amp;/g, "&")
-                  .replace(/&ouml;/g, "ö")}
+                {window.atob(quizArray[currentQuestion].question)}
               </h2>
             </div>
             {/*display list of answers to the current question*/}
@@ -181,13 +175,7 @@ function Quiz({ quizArray }) {
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
                         >
-                          {answerOption.answerText
-                            .replace(/&quot;/g, '"')
-                            .replace(/;&#039;/g, "'")
-                            .replace(/&#039;/g, "'")
-                            .replace(/&rsquo;/g, "'")
-                            .replace(/&amp;/g, "&")
-                            .replace(/&ouml;/g, "ö")}
+                          {window.atob(answerOption.answerText)}
                         </button>
                       );
                     })
@@ -207,11 +195,7 @@ function Quiz({ quizArray }) {
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
                         >
-                          {answerOption.answerText
-                            .replace(/&quot;/g, '"')
-                            .replace(/;&#039;/g, "'")
-                            .replace(/&#039;/g, "'")
-                            .replace(/&rsquo;/g, "'")}
+                          {window.atob(answerOption.answerText)}
                         </button>
                       );
                     })}
