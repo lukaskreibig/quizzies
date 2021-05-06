@@ -26,7 +26,7 @@ function App() {
   const quizAPI = (topic, difficulty) => {
     axios
       .get(
-        `https://opentdb.com/api.php?type=multiple&amount=10&category=${topic}&${difficulty}`
+        `https://opentdb.com/api.php?type=multiple&amount=10&category=${topic}&${difficulty}&encode=base64`
       )
       .then((res) => setQuizArray(res.data.results));
   };
@@ -34,18 +34,12 @@ function App() {
     quizAPI(quizTopic, quizDifficulty);
   }, [quizTopic, quizDifficulty]);
 
-  console.log(quizDifficulty);
-  console.log(quizTopic);
-  console.log(quizArray);
-
   const changeTopic = (event) => {
     setQuizTopic(event.value);
-    console.log(quizTopic);
   };
 
   const changeDifficulty = (event) => {
     setQuizDifficulty(event.target.value);
-    console.log(quizDifficulty);
   };
 
   return (
@@ -67,7 +61,7 @@ function App() {
           />
           <Route path="/quiz" render={() => <Quiz quizArray={quizArray} />} />
           <Route path="/contact" component={Contact} />
-          <Route path="/about" component= {About}/>
+          <Route path="/about" component={About} />
         </Switch>
         <Footer />
       </div>
