@@ -34,65 +34,6 @@ p {
   font-size: 2vmin;
 }
 
-/* Styling for About Us */
-
-.ourHistory {
-  margin-top: 20px;
-}
-
-.texttitle {
-  font-size: 3vh;
-  text-align: center;
-}
-
-.text2 {
-  margin-top: 10px;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-.containerCards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 40px;
-}
-
-.cardTeam {
-  display: flex;
-  height: 450px;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 260px;
-  border-radius: 5px;
-  background-color: #1a6340;
-  color: #e1af4f;
-  box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
-  border: 2px solid #e1af4f;
-  border-radius: 8px;
-}
-
-.avatar {
-  width: 200px;
-  height: 200px;
-  border-radius: 25px;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
-.cardContent {
-  text-align: center;
-  width: 90%;
-  font-size: 12px;
-}
-
-.logosAbout {
-  color: #e1af4f;
-  padding-left: 10px;
-  transition: 0.3s;
-}
-
 /*Styling for Navbar */
 
 .menu {
@@ -771,36 +712,60 @@ h3 {
   /*Mobile About Us ---------------------------------------------------------------------*/
 
   /* Styling for About Us */
-  .body {
-    background-color: #0d482c;
-    border: thick double #e1af4f;
-    font-family: "Lato", sans-serif;
-    color: #e1af4f;
-    height: 96.3vh;
-    background-size: cover;
-    background-position: center;
+  .containerCards {
+    display: none;
+  }
+  .containerCards-mobile {
+    height: 65vh;
+  }
+  .ourHistory {
+    margin-top: 20px;
   }
 
-  .containerCards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  .texttitle {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .text2 {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
   }
 
   .cardTeam {
-    margin-top: 40px;
     display: flex;
-    height: 450px;
+    height: 400px;
     justify-content: center;
     flex-wrap: wrap;
-    width: 260px;
+    width: 130px;
     border-radius: 5px;
     background-color: #1a6340;
     color: #e1af4f;
     box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
     border: 2px solid #e1af4f;
     border-radius: 8px;
+    padding-bottom: 5px;
+  }
+
+  .avatar {
+    width: 170px;
+    height: 170px;
+    border-radius: 25px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .cardContent {
+    text-align: center;
+    width: 60%;
+    font-size: 12px;
+  }
+
+  .logosAbout {
+    color: #e1af4f;
+    padding-left: 10px;
+    transition: 0.3s;
   }
 
   /*About Us Ends */
@@ -874,7 +839,7 @@ h3 {
   .questionbtn {
     margin: 5px 10px;
     height: 50px;
-    width: 87vw;
+    width: 79vw;
   }
   .question-count {
     margin-left: 20px;
@@ -1032,12 +997,18 @@ h3 {
   .rating-title {
     font-size: 20px;
   }
+  .containerCards {
+    display: none;
+  }
 }
 
 /* Media Query for Tablets */
 
 @media (min-width: 481px) and (max-width: 767px) {
   .intro-text {
+    display: none;
+  }
+  .containerCards {
     display: none;
   }
   .maintitle-desktop {
@@ -1099,6 +1070,66 @@ h3 {
   }
   .after-quiz {
     width: 60%;
+  }
+  /* Styling for About Us */
+  .containerCards-mobile {
+    display: none;
+  }
+  .ourHistory {
+    margin-top: 20px;
+  }
+
+  .texttitle {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .text2 {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .containerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+
+  .cardTeam {
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 260px;
+    border-radius: 5px;
+    background-color: #1a6340;
+    color: #e1af4f;
+    box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+    border: 2px solid #e1af4f;
+    border-radius: 8px;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .cardContent {
+    text-align: center;
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .logosAbout {
+    color: #e1af4f;
+    padding-left: 10px;
+    transition: 0.3s;
   }
 }
 
@@ -1171,5 +1202,65 @@ h3 {
     margin: 10px;
     width: 100px;
     height: 70px;
+  }
+  /* Styling for About Us */
+  .containerCards-mobile {
+    display: none;
+  }
+  .ourHistory {
+    margin-top: 20px;
+  }
+
+  .texttitle {
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  .text2 {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .containerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
+
+  .cardTeam {
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 260px;
+    border-radius: 5px;
+    background-color: #1a6340;
+    color: #e1af4f;
+    box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+    border: 2px solid #e1af4f;
+    border-radius: 8px;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .cardContent {
+    text-align: center;
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .logosAbout {
+    color: #e1af4f;
+    padding-left: 10px;
+    transition: 0.3s;
   }
 }

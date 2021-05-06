@@ -1,6 +1,7 @@
 import "./about.css";
 import TeamMember from "./TeamMember";
 import { useSpring, animated } from "react-spring";
+import SimpleCarousel from "simple-react-carousel";
 
 const teamMembers = [
   {
@@ -68,15 +69,23 @@ const About = () => {
     <>
       <div className="ourHistory">
         <animated.div style={teamAni}>
-          <h1> Team Members </h1>
+          <h1>Team Members</h1>
         </animated.div>
       </div>
-
       <animated.div style={cardsAni}>
         <div className="containerCards">
           {teamMembers.map((member) => (
             <TeamMember memberInfo={member} />
           ))}
+        </div>
+      </animated.div>
+      <animated.div style={cardsAni}>
+        <div className="containerCards-mobile">
+          <SimpleCarousel>
+            {teamMembers.map((member) => (
+              <TeamMember memberInfo={member} />
+            ))}
+          </SimpleCarousel>
         </div>
       </animated.div>
     </>
