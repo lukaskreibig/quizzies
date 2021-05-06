@@ -1,54 +1,38 @@
-.ourHistory{
-  align-content: space-around;
+
+.container
+{
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-
-  }
-
-.container{
-  margin: 20px;
+  justify-content: space-evenly;
+  
 }
-
-
 
 .card {
-  display: flex;
-  align-self: center;
-  justify-content: center;
- width: 250px;
-  height: 400px;
-  padding: auto;
-  margin: 20px;
-  border-radius: 5px;
-   background-color: #1a6340;
-    color: #e1af4f;
-    box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
-    border: 2px solid #e1af4f;
-    border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px; 
-}
+
+display: flex;
+height: 600px;
+justify-content: space-evenly;
+flex-wrap: wrap;
+width: 300px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
  
 .avatar
-{
-  align-self: center;
-  flex-wrap:  ;
-  align-content: space-between; 
-   width: 170px;
-  height: 170px;
+{    width: 200px;
+  height: 200px;
   border-radius: 25px;
+  margin-top: 20px;
 }
 
 .cardContent
-{
-  align-items: column;
-  
-
+{ 
+   text-align: center;
+   width: 90%;
+   font-size: 12px;
 }
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-
