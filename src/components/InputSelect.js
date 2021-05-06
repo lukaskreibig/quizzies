@@ -9,18 +9,18 @@ function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
     from: { opacity: 0 },
     to: { opacity: 1 },
     leave: { opacity: 0 },
-    delay: 100,
+    delay: 1200,
 
     config: {
-      duration: 900, // duration for the whole animation form start to end
+      duration: 500, // duration for the whole animation form start to end
     },
   });
 
-  const difficulty = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
+  const topicselect = useSpring({
+    from: { x: -800, opacity: 0 },
+    to: { x: 0, opacity: 1 },
     leave: { opacity: 0 },
-    delay: 500,
+    delay: 300,
 
     config: {
       duration: 300, // duration for the whole animation form start to end
@@ -31,22 +31,24 @@ function InputSelect({ quizCategories, changeTopic, changeDifficulty }) {
     from: { opacity: 0 },
     to: { opacity: 1 },
     leave: { opacity: 0 },
-    delay: 1000,
+    delay: 1200,
 
     config: {
-      duration: 300, // duration for the whole animation form start to end
+      duration: 1000, // duration for the whole animation form start to end
     },
   });
 
   return (
     <div className="Input">
-      <animated.div style={topic}>
-        <div className="Topic">
+      <div className="Topic">
+        <animated.div style={topic}>
           <h2>Search for a topic:</h2>
-
+        </animated.div>
+        <animated.div style={topicselect}>
           <Topic quizCategories={quizCategories} changeTopic={changeTopic} />
-        </div>
-      </animated.div>
+        </animated.div>
+      </div>
+
       <div className="diffbtn">
         <Difficulty changeDifficulty={changeDifficulty} />
       </div>

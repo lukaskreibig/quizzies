@@ -57,16 +57,18 @@ function Home() {
           </p>
         </div>
       </animated.div>
-      <div className="intro-text-mobile">
-        <ReadMore>
-          <Typography className="intro-mobile">
-            Trivia Night is a quiz full of surprises!<br></br>
-            Try to answer each question while the clock is running. If you get
-            stuck, use the joker card. <br></br>To enter the game, click the
-            spinning wheel.
-          </Typography>
-        </ReadMore>
-      </div>
+      <animated.div style={text}>
+        <div className="intro-text-mobile">
+          <ReadMore>
+            <Typography className="intro-mobile">
+              Trivia Night is a quiz full of surprises!<br></br>
+              Try to answer each question while the clock is running. If you get
+              stuck, use the joker card. <br></br>To enter the game, click the
+              spinning wheel.
+            </Typography>
+          </ReadMore>
+        </div>
+      </animated.div>
       <animated.div style={wheel}>
         <div className="start-container">
           <Link to="/inputselect">
