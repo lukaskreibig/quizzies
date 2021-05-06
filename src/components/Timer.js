@@ -7,9 +7,9 @@ const Timer = ({ key, handleAnswerOptionClick }) => (
     duration={15}
     backgroundColor={"#1a6340"}
     colors={[
-      ["#1a6340", 0.33],
-      ["#FFFF00", 0.33],
-      ["#ff3232", 0.33],
+      ["#32b8ca", 0.44],
+      ["#e053a8", 0.33],
+      ["#d27e4e", 0.22],
     ]}
     onComplete={() => handleAnswerOptionClick()}
     size={80}
