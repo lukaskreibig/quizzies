@@ -1,5 +1,6 @@
+/* 
 
-.container
+.containerCard
 {
   display: flex;
   flex-direction: row;
@@ -8,7 +9,7 @@
   
 }
 
-.card {
+.cardTeam {
 
 display: flex;
 height: 600px;
@@ -35,4 +36,4 @@ width: 300px;
    text-align: center;
    width: 90%;
    font-size: 12px;
-}
+} */

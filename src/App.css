@@ -30,8 +30,75 @@ h2 {
   text-align: center;
 }
 
+
+
 p {
   font-size: 2vmin;
+}
+
+/* Styling for About Us */
+
+.ourHistory {
+  margin-top: 20px;
+}
+
+.texttitle {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.text2 {
+  margin-top: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.containerCards
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  
+}
+
+.cardTeam {
+
+display: flex;
+height: 450px;
+justify-content: center;
+flex-wrap: wrap;
+width: 260px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
+ 
+.avatar
+{    width: 200px;
+  height: 200px;
+  border-radius: 25px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+
+.cardContent
+{ 
+   text-align: center;
+   width: 90%;
+   font-size: 12px;
+}
+
+.logosAbout
+{
+  color: #e1af4f;
+  padding-left: 10px;
+  transition: 0.3s;
 }
 
 /*Styling for Navbar */
@@ -244,7 +311,7 @@ a.instagram {
 
 input[type="radio"] {
   display: none;
-}
+}100
 
 .star {
   cursor: pointer;
@@ -715,6 +782,46 @@ h3 {
 /* Media Query for Mobile Devices */
 
 @media (min-width: 331px) and (max-width: 480px) {
+
+  /*Mobile About Us ---------------------------------------------------------------------*/
+
+  /* Styling for About Us */
+.body {
+  background-color: #0d482c;
+  border: thick double #e1af4f;
+  font-family: "Lato", sans-serif;
+  color: #e1af4f;
+  height: 96.3vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.containerCards
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+}
+
+.cardTeam {
+
+margin-top: 40px;
+display: flex;
+height: 450px;
+justify-content: center;
+flex-wrap: wrap;
+width: 260px;
+    border-radius: 5px;
+     background-color: #1a6340;
+      color: #e1af4f;
+      box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.794);
+      border: 2px solid #e1af4f;
+      border-radius: 8px;
+ }
+
+  /*About Us Ends */
+
   #home-link {
     display: none;
   }
