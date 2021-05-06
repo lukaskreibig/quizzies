@@ -9,6 +9,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import { useSpring, animated } from "react-spring";
 
 function App() {
   const [quizArray, setQuizArray] = useState([]);
@@ -42,9 +43,33 @@ function App() {
     setQuizDifficulty(event.target.value);
   };
 
+  const fadein = useSpring({
+    from: { y: -300, opacity: 0 },
+    to: { y: 0, opacity: 1 },
+    leave: { opacity: 0 },
+    delay: 4000,
+
+    config: {
+      duration: 2000, // duration for the whole animation form start to end
+    },
+  });
+
+  const fadeinfooter = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    leave: { opacity: 0 },
+    delay: 4500,
+
+    config: {
+      duration: 2000, // duration for the whole animation form start to end
+    },
+  });
+
   return (
     <div>
-      <Navbar />
+      <animated.div style={fadein}>
+        <Navbar />
+      </animated.div>
       <div className="big-flex">
         <Switch>
           <Route exact path="/" component={Home} />
@@ -63,7 +88,9 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
         </Switch>
-        <Footer />
+        <animated.div style={fadeinfooter}>
+          <Footer />
+        </animated.div>
       </div>
     </div>
   );
