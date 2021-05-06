@@ -27,34 +27,43 @@ const Contact = () => {
         <div className="contact-container">
             <form onSubmit={handleSubmit}>
                 <div className="star-feedback">
-                    <h1>How did you like the game?</h1>
+                    <h1 className="rating-title">How did you like the game?</h1>
                     <StarRating />
                 </div>
-
                 <div className="contact-form">
-                    <h1>Contact Us</h1>
+                    <h2>Contact Us</h2>
 
                     <table className="table">
                         <tr className="name">
                             <td className="left-column">
-                                <label htmlFor="name">Your Name:</label>
+                                <label htmlFor="name">Name:</label>
                             </td>
                             <td className="right-column">
-                                <input type="text" id="name" required />
+                                <input
+                                    className="contact-input"
+                                    type="text"
+                                    id="name"
+                                    required
+                                />
                             </td>
                         </tr>
                         <tr className="email">
                             <td className="left-column">
-                                <label htmlFor="email">Your Email:</label>
+                                <label htmlFor="email">Email:</label>
                             </td>
                             <td className="right-column">
-                                <input type="email" id="email" required />
+                                <input
+                                    className="contact-input"
+                                    type="email"
+                                    id="email"
+                                    required
+                                />
                             </td>
                         </tr>
 
                         <tr className="message">
                             <td className="left-column">
-                                <label htmlFor="message">Your Message:</label>
+                                <label htmlFor="message">Message:</label>
                             </td>
                             <td className="right-column">
                                 <textarea id="message" required />
