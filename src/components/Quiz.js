@@ -73,6 +73,10 @@ function Quiz({ quizArray }) {
     }
   };
 
+  function encode(str) {
+    return decodeURIComponent(escape(window.atob(str)));
+  }
+
   const master = () => {
     if (+score < 5) {
       return <h1>Quiz Newbie!</h1>;
@@ -153,7 +157,7 @@ function Quiz({ quizArray }) {
             {/*display current question*/}
             <div className="question-section">
               <h2 className="question-text">
-                {window.atob(quizArray[currentQuestion].question)}
+                {encode(quizArray[currentQuestion].question)}
               </h2>
             </div>
             {/*display list of answers to the current question*/}
@@ -175,7 +179,7 @@ function Quiz({ quizArray }) {
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
                         >
-                          {window.atob(answerOption.answerText)}
+                          {encode(answerOption.answerText)}
                         </button>
                       );
                     })
@@ -195,7 +199,7 @@ function Quiz({ quizArray }) {
                             handleAnswerOptionClick(answerOption.isCorrect)
                           }
                         >
-                          {window.atob(answerOption.answerText)}
+                          {encode(answerOption.answerText)}
                         </button>
                       );
                     })}
