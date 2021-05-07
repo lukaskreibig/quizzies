@@ -7,7 +7,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #e1af4f;
   height: 96.3vh;
-  background-image: url("/src/background-image.jpg");
+  background-image: url("/src/pokertable.jpg");
   background-size: cover;
   background-position: center;
 }
