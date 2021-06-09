@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/lukaskreibig/quizzies">
-    <img src="src/components/img/trivia-night-rm.png" alt="Logo" width="80" height="80">
+    <img src="src/components/img/trivia-night-rm.png" alt="Logo">
   </a>
 
   <h3 align="center">Trivia Night</h3>
@@ -36,7 +36,7 @@
 
 ## About The Project
 
-![Product Name Screen Shot](components/img/trivianight.png)
+![Product Name Screen Shot](src/components/img/trivianight.png)
 
 When setting out to create our second project at Wild Code School, we decided to go for a Quiz. Our mission: Testing the knowledge of the user, and expanding our knowledge applying Axios fetching an API, using Hooks, Spring-Animations and more.
 
@@ -48,7 +48,7 @@ Our website features:
 - A Timer
 - Results Page
 
-![](components/img/trivianight.png)
+![](src/components/img/trivianight.png)
 
 ### Built With
 
