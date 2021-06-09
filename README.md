@@ -36,7 +36,7 @@
 
 ## About The Project
 
-![Product Name Screen Shot](src/components/img/trivianight.png)
+![Product Name Screen Shot](src/components/img/presentation.png)
 
 When setting out to create our second project at Wild Code School, we decided to go for a Quiz. Our mission: Testing the knowledge of the user, and expanding our knowledge applying Axios fetching an API, using Hooks, Spring-Animations and more.
 
@@ -47,8 +47,6 @@ Our website features:
 - A 50/50 Joker
 - A Timer
 - Results Page
-
-![](src/components/img/trivianight.png)
 
 ### Built With
 
