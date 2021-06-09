@@ -38,7 +38,7 @@
 
 ![Product Name Screen Shot](src/components/img/presentation.png)
 
-When setting out to create our second project at Wild Code School, we decided to go for a Quiz. Our mission: Testing the knowledge of the user, and expanding our knowledge applying Axios fetching an API, using Hooks, Spring-Animations and more.
+When setting out to create our second project at Wild Code School, we decided to go for a Quiz. Our mission: Testing the knowledge of the user and, at the same time, expanding our knowledge applying Axios fetching an API, using Hooks, Spring-Animations and more.
 
 Our website features:
 
