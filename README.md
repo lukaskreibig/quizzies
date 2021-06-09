@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/lukaskreibig/quizzies">
-    <img src="components/img/trivia-night-rm.png" alt="Logo" width="80" height="80">
+    <img src="src/components/img/trivia-night-rm.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Trivia Night</h3>
