@@ -10,7 +10,7 @@
  How much do you know? A Trivia Quiz built with React using Trivia API.
     <br />
     <br />
-    <a href="https://6092f761d91cc40d17776cc9--silly-hawking-1e1643.netlify.app/">View Demo</a>
+    <a href="https://silly-hawking-1e1643.netlify.app/about">View Demo</a>
     ·
     <a href="https://github.com/lukaskreibig/quizzies/issues">Report Bug</a>
     ·
