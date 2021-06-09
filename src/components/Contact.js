@@ -75,7 +75,6 @@ const Contact = () => {
 
             <table className="table">
               <tr className="name">
-                <td className="left-column"></td>
                 <td className="right-column">
                   <input
                     className="contact-input"
@@ -87,7 +86,6 @@ const Contact = () => {
                 </td>
               </tr>
               <tr className="email">
-                <td className="left-column"></td>
                 <td className="right-column">
                   <input
                     className="contact-input"
@@ -100,7 +98,6 @@ const Contact = () => {
               </tr>
 
               <tr className="message">
-                <td className="left-column"></td>
                 <td className="right-column">
                   <textarea id="message" required placeholder="Message" />
                 </td>
