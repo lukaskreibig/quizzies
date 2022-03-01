@@ -11,10 +11,6 @@
     <br />
     <br />
     <a href="https://silly-hawking-1e1643.netlify.app/about">View Demo</a>
-    ·
-    <a href="https://github.com/lukaskreibig/quizzies/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/lukaskreibig/quizzies/issues">Request Feature</a>
   </p>
 </p>
 
