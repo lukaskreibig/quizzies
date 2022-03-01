@@ -52,6 +52,7 @@ Our website features:
 
 - [React](https://reactjs.org/)
 - [Javascript](https://www.javascript.com/)
+- [react-spring](https://react-spring.io/)
 - [HTML](https://html.com/)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 
